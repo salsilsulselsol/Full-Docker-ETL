@@ -1,0 +1,49 @@
+# Direktori virtual environment Python (jika Anda membuatnya secara lokal)
+venv/
+*.pyc
+__pycache__/
+.DS_Store
+
+# Logs Airflow (biasanya sudah di-mount dari host, tapi bisa diabaikan jika tercopy)
+airflow/logs/*
+# Jangan abaikan folder logs jika Anda ingin menyimpan struktur direktori kosongnya
+# !airflow/logs/.gitkeep 
+# (atau cara lain untuk menjaga folder kosong jika diinginkan)
+
+# Data Airflow (jika berisi data besar atau sementara)
+# airflow/data/* # Sesuaikan ini jika Anda ingin menyertakan contoh data atau file konfigurasi di dalamnya
+
+# File .env (JANGAN UNGGAH FILE .env YANG BERISI KREDENSIAL ATAU KUNCI RAHASIA)
+.env 
+
+# File unduhan Selenium (jika di-mount dan tidak sengaja ter-commit)
+airflow/data/idx_downloads/*
+# !airflow/data/idx_downloads/.gitkeep
+
+# Dependensi Node.js (jika ada di API atau Laravel)
+node_modules/
+
+# Dependensi Composer PHP (untuk Laravel)
+laravel/vendor/
+laravel/.env # File .env khusus Laravel juga harus diabaikan
+laravel/storage/framework/sessions/*
+laravel/storage/framework/views/*
+laravel/storage/framework/cache/data/*
+laravel/storage/logs/*.log
+laravel/public/storage # Biasanya symlink ke storage/app/public
+
+# File spesifik sistem operasi atau editor
+.vscode/
+*.idea/
+
+# File sementara Docker
+docker-compose.override.yml
+
+# Database lokal (jika ada file DB yang dibuat di root)
+*.sqlite3
+*.db
+
+# Output build atau file besar yang tidak perlu di repo
+# Misalnya, jika ada folder build khusus untuk API atau frontend
+# api/build/
+# laravel/public/build/
