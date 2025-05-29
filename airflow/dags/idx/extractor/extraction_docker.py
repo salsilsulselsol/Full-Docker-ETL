@@ -36,7 +36,10 @@ def init_driver(download_dir_container):
     options.add_argument("--no-sandbox") 
     options.add_argument("--disable-dev-shm-usage") 
     options.add_argument("--disable-gpu") 
-    options.add_argument("window-size=1920x1080") 
+    options.add_argument("window-size=1920x1080")
+
+    options.set_preference("permissions.default.image", 2)
+
     options.set_preference("browser.download.folderList", 2)
     options.set_preference("browser.download.manager.showWhenStarting", False)
     options.set_preference("browser.download.dir", download_dir_container) 
@@ -132,8 +135,8 @@ def save_to_mongodb(data_to_save, company_code, year_str, period_str):
         if 'client' in locals() and client: client.close()
 
 def scrape_financial_data(driver, download_dir_container):
-    scrape_years_str = os.environ.get("SCRAPE_YEARS", "2023") 
-    scrape_periods_str = os.environ.get("SCRAPE_PERIODS", "audit,tw1") 
+    scrape_years_str = os.environ.get("SCRAPE_YEARS", "2021,2022,2023,2024,2025") 
+    scrape_periods_str = os.environ.get("SCRAPE_PERIODS", "tw1,tw2,tw3,audit") 
     
     years_to_scrape = [y.strip() for y in scrape_years_str.split(',')]
     periods_to_scrape = [p.strip().lower() for p in scrape_periods_str.split(',')]
@@ -148,66 +151,85 @@ def scrape_financial_data(driver, download_dir_container):
             for attempt in range(max_page_load_retries):
                 try:
                     driver.get(IDX_URL)
-                    time.sleep(random.uniform(3, 5)) 
+                    # --- OPTIMASI: Kurangi sedikit fixed wait awal, andalkan WebDriverWait ---
+                    time.sleep(random.uniform(1, 3)) # Sebelumnya 3-5 detik
+                    # --------------------------------------------------------------------
                     
                     logger.info("Waiting for year input elements to be visible...")
-                    WebDriverWait(driver, 50).until( 
+                    WebDriverWait(driver, 20).until(
                         EC.visibility_of_element_located((By.CSS_SELECTOR, f"input[name='year'][value='{year_val_str}']"))
                     )
                     logger.info(f"✅ Page loaded for Year {year_val_str}, Period {period_val_str} (Attempt {attempt + 1})")
 
                     year_radio_css = f"input[name='year'][value='{year_val_str}']"
-                    year_radio = WebDriverWait(driver, 35).until( 
+                    year_radio = WebDriverWait(driver, 30).until( 
                         EC.element_to_be_clickable((By.CSS_SELECTOR, year_radio_css))
                     )
                     driver.execute_script("arguments[0].click();", year_radio)
                     logger.info(f"✅ Selected year {year_val_str}")
-                    time.sleep(random.uniform(2, 4)) 
+                    time.sleep(random.uniform(1, 2)) # Sebelumnya 2-4 detik
+                    # -----------------------------------------------------------------------------
 
                     period_radio_css = f"input[name='period'][value='{period_val_str}']"
                     logger.info(f"Attempting to select period with CSS: {period_radio_css}")
-                    period_radio = WebDriverWait(driver, 35).until( 
+                    period_radio = WebDriverWait(driver, 30).until( 
                         EC.element_to_be_clickable((By.CSS_SELECTOR, period_radio_css))
                     )
                     driver.execute_script("arguments[0].click();", period_radio)
                     logger.info(f"✅ Selected period {period_val_str}")
-                    time.sleep(random.uniform(2, 4))
+                    # --- OPTIMASI: Kurangi fixed wait ---
+                    time.sleep(random.uniform(1, 2)) # Sebelumnya 2-4 detik
+                    # ----------------------------------
 
                     apply_button_css = "button.btn--primary" 
                     logger.info(f"Attempting to click apply button with CSS: {apply_button_css}")
-                    apply_button = WebDriverWait(driver, 35).until( 
+                    apply_button = WebDriverWait(driver, 30).until( 
                         EC.element_to_be_clickable((By.CSS_SELECTOR, apply_button_css))
                     )
                     driver.execute_script("arguments[0].scrollIntoView(true);", apply_button) 
-                    time.sleep(random.uniform(0.5, 1))
+                    time.sleep(random.uniform(0.5, 1)) # Biarkan ini untuk memastikan scroll selesai
                     driver.execute_script("arguments[0].click();", apply_button)
                     logger.info("✅ Clicked 'Terapkan' button")
-                    logger.info("Waiting for results to load after applying filter (e.g., 10-15 seconds)...")
-                    time.sleep(random.uniform(10, 15)) 
+                    
+                    # --- OPTIMASI: Ganti fixed wait panjang dengan WebDriverWait yang lebih cerdas ---
+                    # logger.info("Waiting for results to load after applying filter (e.g., 10-15 seconds)...")
+                    # time.sleep(random.uniform(10, 15)) # Hapus ini
+                    box_css_selector = "div.bzg_c > div.box" 
+                    logger.info(f"Waiting for company boxes with selector: {box_css_selector} (up to 45s)")
+                    try:
+                        WebDriverWait(driver, 45).until( 
+                            EC.visibility_of_element_located((By.CSS_SELECTOR, box_css_selector))
+                        )
+                        logger.info("✅ At least one company box is visible after applying filter.")
+                    except Exception as e_box_after_filter:
+                        logger.warning(f"No company boxes visible after applying filter for {year_val_str}-{period_val_str}. Error: {e_box_after_filter}")
+                        # Ambil screenshot jika tidak ada kotak setelah filter
+                        screenshot_path = os.path.join(download_dir_container, f"debug_no_boxes_after_filter_{year_val_str}_{period_val_str}.png")
+                        try:
+                            driver.save_screenshot(screenshot_path)
+                            logger.info(f"📷 Debug screenshot (no boxes after filter) saved to: {screenshot_path}")
+                        except Exception as e_ss:
+                            logger.error(f"Failed to save debug screenshot: {e_ss}")
+                        continue # Lanjut ke kombinasi tahun/periode berikutnya jika tidak ada hasil
+                    # ---------------------------------------------------------------------------------
 
                     current_page_num = 1
                     while True: 
                         logger.info(f"\n📄 Processing page {current_page_num} for {year_val_str} - {period_val_str}")
                         
-                        box_css_selector = "div.bzg_c > div.box" 
-                        
-                        logger.info(f"Waiting for company boxes with selector: {box_css_selector}")
+                        # Kita sudah menunggu kotak muncul setelah filter, jadi di sini kita bisa langsung find_elements
+                        # Namun, ada baiknya tetap ada timeout pendek jika halaman berubah saat paginasi
                         try:
-                            WebDriverWait(driver, 45).until( 
-                                EC.visibility_of_element_located((By.CSS_SELECTOR, box_css_selector))
+                            # Pastikan elemen masih ada, terutama setelah paginasi
+                            WebDriverWait(driver, 15).until(
+                                EC.presence_of_element_located((By.CSS_SELECTOR, box_css_selector))
                             )
-                            logger.info("✅ At least one company box is visible.")
                             company_boxes = driver.find_elements(By.CSS_SELECTOR, box_css_selector)
-                            logger.info(f"Found {len(company_boxes)} company boxes on page.")
-                        except Exception as e_box_wait: 
-                            logger.warning(f"No company boxes found or timed out on page {current_page_num}. Error: {e_box_wait}")
-                            screenshot_path = os.path.join(download_dir_container, f"debug_no_boxes_{year_val_str}_{period_val_str}_page{current_page_num}.png")
-                            try:
-                                driver.save_screenshot(screenshot_path)
-                                logger.info(f"📷 Debug screenshot saved to: {screenshot_path}")
-                            except Exception as e_ss:
-                                logger.error(f"Failed to save debug screenshot: {e_ss}")
-                            company_boxes = [] 
+                            logger.info(f"Found {len(company_boxes)} company boxes on page {current_page_num}.")
+                        except Exception:
+                            logger.warning(f"No company boxes found on page {current_page_num} (after pagination or initial load).")
+                            company_boxes = []
+
 
                         if not company_boxes:
                             logger.info(f"No company boxes to process on page {current_page_num}. End of results for {year_val_str}-{period_val_str}.")
@@ -237,10 +259,8 @@ def scrape_financial_data(driver, download_dir_container):
                                             except OSError as e_remove: logger.error(f"Error removing old file: {e_remove}")
                                         
                                         driver.execute_script("arguments[0].scrollIntoView(true);", link_elem)
-                                        time.sleep(random.uniform(0.5,1))
-                                        # --- PERUBAHAN: Menggunakan JavaScript click ---
+                                        time.sleep(random.uniform(0.5,1)) # Biarkan ini untuk scroll
                                         driver.execute_script("arguments[0].click();", link_elem)
-                                        # -------------------------------------------
                                         logger.info(f"✅ Clicked download for {company_code_str} using JavaScript.")
                                         
                                         download_timeout_seconds = 90; time_waited_seconds = 0; downloaded_file_path = None
@@ -277,7 +297,9 @@ def scrape_financial_data(driver, download_dir_container):
                                         instance_zip_link_found = True; break 
                                 
                                 if not instance_zip_link_found: logger.info(f"No 'instance.zip' download link found for {company_code_str}")
-                                time.sleep(random.uniform(1, 3)) 
+                                # --- OPTIMASI: Kurangi sleep antar perusahaan jika tidak perlu ---
+                                time.sleep(random.uniform(0.5, 1.5)) # Sebelumnya 1-3 detik
+                                # -----------------------------------------------------------------
                             except Exception as e_company:
                                 logger.error(f"❌ Error processing box for {company_code_str}: {e_company}", exc_info=True)
                                 driver.execute_script("window.scrollBy(0, 100);"); time.sleep(0.5); continue 
@@ -285,8 +307,7 @@ def scrape_financial_data(driver, download_dir_container):
                         logger.info(f"✅ Finished page {current_page_num}")
                         try:
                             next_button_css = "ul.pagination li.page-item a[rel='next'], button.btn-arrow.--next"
-                            # Beri waktu sedikit untuk next button muncul dan bisa diklik
-                            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, next_button_css)))
+                            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, next_button_css))) # Cek keberadaan dulu
                             next_button_elem = driver.find_element(By.CSS_SELECTOR, next_button_css)
                             
                             is_clickable_tag = next_button_elem.tag_name == 'a' or \
@@ -297,13 +318,15 @@ def scrape_financial_data(driver, download_dir_container):
                                 driver.execute_script("arguments[0].scrollIntoView(true);", next_button_elem)
                                 time.sleep(0.5)
                                 driver.execute_script("arguments[0].click();", next_button_elem)
-                                time.sleep(random.uniform(4, 7)) 
+                                # --- OPTIMASI: Kurangi sleep setelah klik next, andalkan WebDriverWait di awal loop page ---
+                                time.sleep(random.uniform(2, 4)) # Sebelumnya 4-7 detik
+                                # -------------------------------------------------------------------------------------
                                 current_page_num += 1
                             else: logger.info("Next button not active/found. Last page."); break 
                         except Exception: logger.info("No 'Next Page' button. End of pagination."); break 
                     
                     logger.info(f"✅ All pages processed for {year_val_str} - {period_val_str}")
-                    break # Sukses untuk kombinasi tahun/periode ini
+                    break
                 
                 except Exception as e_page_load:
                     logger.error(f"❌ Error during page setup for {year_val_str} - {period_val_str} (Attempt {attempt + 1}/{max_page_load_retries}): {e_page_load}", exc_info=False) 
@@ -326,10 +349,10 @@ def main():
     try:
         logger.info(f"Preparing download directory: {DOWNLOAD_DIR}")
         for item in os.listdir(DOWNLOAD_DIR):
-            if item.lower().endswith((".zip", ".part", ".crdownload")): 
+            if item.lower().endswith((".zip", ".part", ".crdownload")):
                 try: os.remove(os.path.join(DOWNLOAD_DIR, item)); logger.info(f"Cleaned: {item}")
                 except OSError as e_cl: logger.error(f"Error cleaning {item}: {e_cl}")
-        driver = init_driver(DOWNLOAD_DIR) 
+        driver = init_driver(DOWNLOAD_DIR)
         scrape_financial_data(driver, DOWNLOAD_DIR)
     except Exception as e_main:
         logger.error(f"Critical error in main execution: {e_main}", exc_info=True)
