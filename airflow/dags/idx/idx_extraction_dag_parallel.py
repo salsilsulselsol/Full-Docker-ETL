@@ -13,7 +13,7 @@ DOCKER_NETWORK_NAME = "project_etl_network" # Harus cocok dengan nama network di
 EXTRACTOR_IMAGE_NAME = "idx_etl_extractor_custom:latest"
 
 # --- DAFTAR TAHUN DAN PERIODE UNTUK DIPROSES ---
-YEARS_TO_SCRAPE = ["2021", "2022"]#, "2023", "2024", "2025"] # Sesuaikan dengan kebutuhan Anda
+YEARS_TO_SCRAPE = ["2021", "2022", "2023", "2024", "2025"] # Sesuaikan dengan kebutuhan Anda
 ALL_PERIODS_STRING = "tw1,tw2,tw3,audit" # Semua periode yang diinginkan
 # ---------------------------------------------
 
