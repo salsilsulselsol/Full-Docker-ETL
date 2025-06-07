@@ -1,15 +1,81 @@
-# Dockerfile (di project-root/idx-etl-airflow/)
-ARG AIRFLOW_VERSION=2.9.2
-ARG PYTHON_VERSION=3.10
-FROM apache/airflow:${AIRFLOW_VERSION}-python${PYTHON_VERSION}
+# Gunakan base image resmi Airflow
+FROM apache/airflow:2.9.0-python3.10
 
-# Tidak perlu USER root di sini jika hanya menginstal paket pip untuk user airflow
+# Gunakan root untuk install Java dan tools dasar
+USER root
 
-# Langsung ganti ke user airflow SEBELUM menginstal paket Python
+# Install Java dan dependensi dasar
+RUN apt-get update && apt-get install -y \
+    # Dependensi untuk iqplus
+    chromium \
+    libu2f-udev \
+    fonts-liberation \
+    libappindicator3-1 \
+    libasound2 \
+    libatk-bridge2.0-0 \
+    libatk1.0-0 \
+    libcups2 \
+    libdbus-1-3 \
+    libgdk-pixbuf2.0-0 \
+    libnspr4 \
+    libnss3 \
+    libx11-xcb1 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxrandr2 \
+    xdg-utils \
+    unzip \
+    # Dependensi untuk yfinance/pyspark
+    openjdk-17-jdk \
+    gcc \
+    python3-dev \
+    curl \
+    wget \
+    # --- TAMBAHAN UNTUK IDX EXTRACTOR ---
+    firefox-esr \
+    # ------------------------------------
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install ChromeDriver versi 136.0.7103.92 (sudah ada)
+RUN wget -O /tmp/chromedriver.zip https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/136.0.7103.92/linux64/chromedriver-linux64.zip && \
+    unzip /tmp/chromedriver.zip -d /tmp/chromedriver && \
+    mv /tmp/chromedriver/chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
+    chmod +x /usr/local/bin/chromedriver && \
+    rm -rf /tmp/chromedriver /tmp/chromedriver.zip
+
+# --- TAMBAHAN: Install Geckodriver (untuk Firefox) ---
+RUN wget -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-linux64.tar.gz && \
+    tar -xzf /tmp/geckodriver.tar.gz -C /usr/local/bin && \
+    chmod +x /usr/local/bin/geckodriver && \
+    rm /tmp/geckodriver.tar.gz
+# ----------------------------------------------------
+
+# Set environment variable Java untuk PySpark
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PATH="$JAVA_HOME/bin:$PATH"
+# Set path chromium dan chromedriver
+ENV CHROME_BIN=/usr/bin/chromium
+ENV CHROMEDRIVER_PATH=/usr/local/bin/chromedriver
+
+# Kembali ke user airflow
 USER airflow
 
-# Instal provider atau library Python tambahan yang dibutuhkan oleh DAGs Anda.
-RUN pip install --no-cache-dir \
-    apache-airflow-providers-docker
-
-# USER airflow # Tidak perlu lagi karena sudah di atas
+# Install dependencies Python tanpa MySQL
+RUN pip install --no-cache-dir --trusted-host pypi.org --trusted-host files.pythonhosted.org \
+    yfinance \
+    pandas \
+    numpy \
+    pymongo \
+    apache-airflow-providers-mongo==4.0.0 \
+    findspark \
+    flask \
+    flask-cors \
+    waitress \
+    requests \
+    pyspark==3.4.0 \
+    selenium \
+    webdriver_manager \
+    transformers \
+    torch==2.1.2 --extra-index-url https://download.pytorch.org/whl/cpu \
+    sentencepiece
