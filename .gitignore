@@ -47,3 +47,4 @@ docker-compose.override.yml
 # Misalnya, jika ada folder build khusus untuk API atau frontend
 # api/build/
 # laravel/public/build/
+catatan.txt
