@@ -259,7 +259,7 @@ with DAG(
         'owner': 'airflow',
         'retries': 2,
         'retry_delay': timedelta(minutes=5),
-        'execution_timeout': timedelta(minutes=60),
+        'execution_timeout': timedelta(minutes=600),
     },
     tags=['iqplus', 'news', 'scraper', 'parallel'],
 ) as dag:

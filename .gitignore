@@ -1,50 +1,64 @@
-# Direktori virtual environment Python (jika Anda membuatnya secara lokal)
+# Ignore virtual environment and Python bytecode
 venv/
 *.pyc
 __pycache__/
 .DS_Store
 
-# Logs Airflow (biasanya sudah di-mount dari host, tapi bisa diabaikan jika tercopy)
-airflow/logs/*
-# Jangan abaikan folder logs jika Anda ingin menyimpan struktur direktori kosongnya
-# !airflow/logs/.gitkeep 
-# (atau cara lain untuk menjaga folder kosong jika diinginkan)
+# Ignore Airflow specific files/folders
+# Assuming logs/ and data/ are mounted as volumes from host for easy access/persistence
+airflow/logs/
+airflow/data/
+airflow/plugins/__pycache__/
+airflow/dags/__pycache__/
 
-# Data Airflow (jika berisi data besar atau sementara)
-# airflow/data/* # Sesuaikan ini jika Anda ingin menyertakan contoh data atau file konfigurasi di dalamnya
+# Ignore Python dependencies in API
+api/__pycache__/
+api/venv/ 
+api/build/ 
 
-# File .env (JANGAN UNGGAH FILE .env YANG BERISI KREDENSIAL ATAU KUNCI RAHASIA)
-.env 
+# Laravel webDashboard specific ignores
+# Crucial: Ensure these paths are relative to the .gitignore file's location
+# and match your actual folder structure (webDashboard/)
+webDashboard/vendor/
+webDashboard/.env
+webDashboard/.env.example.local 
+webDashboard/node_modules/ 
+webDashboard/public/hot 
+webDashboard/public/storage
+webDashboard/storage/*.bak
+webDashboard/storage/framework/sessions/*
+webDashboard/storage/framework/views/*
+webDashboard/storage/framework/cache/data/*
+webDashboard/storage/logs/*.log
+webDashboard/bootstrap/cache/*.php 
 
-# File unduhan Selenium (jika di-mount dan tidak sengaja ter-commit)
-airflow/data/idx_downloads/*
-# !airflow/data/idx_downloads/.gitkeep
+# Build artifacts for Laravel (e.g., from Vite/Webpack)
+webDashboard/public/build/
 
-# Dependensi Node.js (jika ada di API atau Laravel)
-node_modules/
-
-# Dependensi Composer PHP (untuk Laravel)
-laravel/vendor/
-laravel/.env # File .env khusus Laravel juga harus diabaikan
-laravel/storage/framework/sessions/*
-laravel/storage/framework/views/*
-laravel/storage/framework/cache/data/*
-laravel/storage/logs/*.log
-laravel/public/storage # Biasanya symlink ke storage/app/public
-
-# File spesifik sistem operasi atau editor
+# IDE and OS specific files
 .vscode/
-*.idea/
+.idea/
+.project
+.directory
+Thumbs.db
+.DS_Store
 
-# File sementara Docker
-docker-compose.override.yml
+# Docker specific files
+docker-compose.override.yml # Untuk override lokal yang tidak di-commit
+docker-compose.yaml.bak # Backup file compose jika Anda membuatnya
 
-# Database lokal (jika ada file DB yang dibuat di root)
+# Local development database files (if you have any outside of Docker volumes)
+*.sqlite
 *.sqlite3
 *.db
+*.mdb
 
-# Output build atau file besar yang tidak perlu di repo
-# Misalnya, jika ada folder build khusus untuk API atau frontend
-# api/build/
-# laravel/public/build/
-catatan.txt
+# Custom log files or temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Specific files in the root that should not be committed
+notes.txt
+# Dockerfile # Hapus baris ini jika Anda ingin Dockerfile di root tidak dilacak

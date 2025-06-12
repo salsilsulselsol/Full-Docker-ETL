@@ -3,7 +3,7 @@ from flask_cors import CORS
 import pymongo
 from datetime import datetime
 
-app = Flask(_name_)
+app = Flask(__name__)
 CORS(app)
 
 # MongoDB connection
@@ -208,5 +208,5 @@ def get_iqplus_news_by_id(news_id):
         return jsonify({"status": "error", "message": "Invalid news ID"}), 400
 
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(host='0.0.0.0', port=5000, debug=True)

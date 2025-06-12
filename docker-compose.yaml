@@ -247,24 +247,13 @@ services:
     networks:
       - airflow-network
 
-  # Laravel aplikasi
-  laravel-app:
-    build:
-      context: ./laravel
-      dockerfile: Dockerfile
-    container_name: laravel-app
-    ports:
-      - "8081:80"
-    volumes:
-      - ./laravel:/var/www/html
-    restart: unless-stopped
-    networks:
-      - airflow-network
-
 volumes:
   postgres-db-volume:
   mongo-data:
 
 networks:
   airflow-network:
+    driver: bridge
+ 
+  etl-app-network:    # Definisi Jaringan Utama yang disatukan
     driver: bridge

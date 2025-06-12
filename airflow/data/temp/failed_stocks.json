@@ -1,1 +1,4757 @@
-[]
+[
+  {
+    "kode_saham": "AALI.JK",
+    "nama_perusahaan": "Astra_Agro_Lestari_Tbk",
+    "reason": "Failed to perform, curl: (7) Failed to connect to guce.yahoo.com port 443 after 3 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+  },
+  {
+    "kode_saham": "ABBA.JK",
+    "nama_perusahaan": "Mahaka_Media_Tbk",
+    "reason": "Failed to perform, curl: (7) Failed to connect to guce.yahoo.com port 443 after 2 ms: Could not connect to server. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+  },
+  {
+    "kode_saham": "ABDA.JK",
+    "nama_perusahaan": "Asuransi_Bina_Dana_Arta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ABMM.JK",
+    "nama_perusahaan": "ABM_Investama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ACES.JK",
+    "nama_perusahaan": "Aspirasi_Hidup_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ACST.JK",
+    "nama_perusahaan": "Acset_Indonusa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ADES.JK",
+    "nama_perusahaan": "Akasha_Wira_International_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ADHI.JK",
+    "nama_perusahaan": "Adhi_Karya_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ADMF.JK",
+    "nama_perusahaan": "Adira_Dinamika_Multi_Finance_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ADMG.JK",
+    "nama_perusahaan": "Polychem_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ADRO.JK",
+    "nama_perusahaan": "Alamtri_Resources_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AGII.JK",
+    "nama_perusahaan": "Samator_Indo_Gas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AGRO.JK",
+    "nama_perusahaan": "Bank_Raya_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AGRS.JK",
+    "nama_perusahaan": "Bank_IBK_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AHAP.JK",
+    "nama_perusahaan": "Asuransi_Harta_Aman_Pratama_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AIMS.JK",
+    "nama_perusahaan": "Artha_Mahiya_Investama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AISA.JK",
+    "nama_perusahaan": "FKS_Food_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AKKU.JK",
+    "nama_perusahaan": "Anugerah_Kagum_Karya_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AKPI.JK",
+    "nama_perusahaan": "Argha_Karya_Prima_Industry_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AKRA.JK",
+    "nama_perusahaan": "AKR_Corporindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AKSI.JK",
+    "nama_perusahaan": "Mineral_Sumberdaya_Mandiri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ALDO.JK",
+    "nama_perusahaan": "Alkindo_Naratama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ALKA.JK",
+    "nama_perusahaan": "Alakasa_Industrindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ALMI.JK",
+    "nama_perusahaan": "Alumindo_Light_Metal_Industry_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ALTO.JK",
+    "nama_perusahaan": "Tri_Banyan_Tirta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMAG.JK",
+    "nama_perusahaan": "Asuransi_Multi_Artha_Guna_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMFG.JK",
+    "nama_perusahaan": "Asahimas_Flat_Glass_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMIN.JK",
+    "nama_perusahaan": "Ateliers_Mecaniques_D_Indonesi",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMRT.JK",
+    "nama_perusahaan": "Sumber_Alfaria_Trijaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ANJT.JK",
+    "nama_perusahaan": "Austindo_Nusantara_Jaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ANTM.JK",
+    "nama_perusahaan": "Aneka_Tambang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "APEX.JK",
+    "nama_perusahaan": "Apexindo_Pratama_Duta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "APIC.JK",
+    "nama_perusahaan": "Pacific_Strategic_Financial_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "APII.JK",
+    "nama_perusahaan": "Arita_Prima_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "APLI.JK",
+    "nama_perusahaan": "Asiaplast_Industries_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "APLN.JK",
+    "nama_perusahaan": "Agung_Podomoro_Land_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARGO.JK",
+    "nama_perusahaan": "Argo_Pantes_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARII.JK",
+    "nama_perusahaan": "Atlas_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARNA.JK",
+    "nama_perusahaan": "Arwana_Citramulia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARTA.JK",
+    "nama_perusahaan": "Arthavest_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARTI.JK",
+    "nama_perusahaan": "Ratu_Prabu_Energi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARTO.JK",
+    "nama_perusahaan": "Bank_Jago_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASBI.JK",
+    "nama_perusahaan": "Asuransi_Bintang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASDM.JK",
+    "nama_perusahaan": "Asuransi_Dayin_Mitra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASGR.JK",
+    "nama_perusahaan": "Astra_Graphia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASII.JK",
+    "nama_perusahaan": "Astra_International_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASJT.JK",
+    "nama_perusahaan": "Asuransi_Jasa_Tania_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASMI.JK",
+    "nama_perusahaan": "Asuransi_Maximus_Graha_Persada",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASRI.JK",
+    "nama_perusahaan": "Alam_Sutera_Realty_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASRM.JK",
+    "nama_perusahaan": "Asuransi_Ramayana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASSA.JK",
+    "nama_perusahaan": "Adi_Sarana_Armada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ATIC.JK",
+    "nama_perusahaan": "Anabatic_Technologies_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AUTO.JK",
+    "nama_perusahaan": "Astra_Otoparts_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BABP.JK",
+    "nama_perusahaan": "Bank_MNC_Internasional_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BACA.JK",
+    "nama_perusahaan": "Bank_Capital_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BAJA.JK",
+    "nama_perusahaan": "Saranacentral_Bajatama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BALI.JK",
+    "nama_perusahaan": "Bali_Towerindo_Sentra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BAPA.JK",
+    "nama_perusahaan": "Bekasi_Asri_Pemula_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BATA.JK",
+    "nama_perusahaan": "Sepatu_Bata_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BAYU.JK",
+    "nama_perusahaan": "Bayu_Buana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBCA.JK",
+    "nama_perusahaan": "Bank_Central_Asia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBHI.JK",
+    "nama_perusahaan": "Allo_Bank_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBKP.JK",
+    "nama_perusahaan": "Bank_KB_Bukopin_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBLD.JK",
+    "nama_perusahaan": "Buana_Finance_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBMD.JK",
+    "nama_perusahaan": "Bank_Mestika_Dharma_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBNI.JK",
+    "nama_perusahaan": "Bank_Negara_Indonesia_(Persero",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBRI.JK",
+    "nama_perusahaan": "Bank_Rakyat_Indonesia_(Persero",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBRM.JK",
+    "nama_perusahaan": "Pelayaran_Nasional_Bina_Buana_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBTN.JK",
+    "nama_perusahaan": "Bank_Tabungan_Negara_(Persero)",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBYB.JK",
+    "nama_perusahaan": "Bank_Neo_Commerce_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BCAP.JK",
+    "nama_perusahaan": "MNC_Kapital_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BCIC.JK",
+    "nama_perusahaan": "Bank_JTrust_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BCIP.JK",
+    "nama_perusahaan": "Bumi_Citra_Permai_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BDMN.JK",
+    "nama_perusahaan": "Bank_Danamon_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BEKS.JK",
+    "nama_perusahaan": "Bank_Pembangunan_Daerah_Banten",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BEST.JK",
+    "nama_perusahaan": "Bekasi_Fajar_Industrial_Estate",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BFIN.JK",
+    "nama_perusahaan": "BFI_Finance__Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BGTG.JK",
+    "nama_perusahaan": "Bank_Ganesha_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BHIT.JK",
+    "nama_perusahaan": "MNC_Asia_Holding_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BIKA.JK",
+    "nama_perusahaan": "Binakarya_Jaya_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BIMA.JK",
+    "nama_perusahaan": "Primarindo_Asia_Infrastructure",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BINA.JK",
+    "nama_perusahaan": "Bank_Ina_Perdana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BIPI.JK",
+    "nama_perusahaan": "Astrindo_Nusantara_Infrastrukt",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BIPP.JK",
+    "nama_perusahaan": "Bhuwanatala_Indah_Permai_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BIRD.JK",
+    "nama_perusahaan": "Blue_Bird_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BISI.JK",
+    "nama_perusahaan": "BISI_International_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BJBR.JK",
+    "nama_perusahaan": "Bank_Pembangunan_Daerah_Jawa_B",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BJTM.JK",
+    "nama_perusahaan": "Bank_Pembangunan_Daerah_Jawa_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BKDP.JK",
+    "nama_perusahaan": "Bukit_Darmo_Property_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BKSL.JK",
+    "nama_perusahaan": "Sentul_City_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BKSW.JK",
+    "nama_perusahaan": "Bank_QNB_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BLTA.JK",
+    "nama_perusahaan": "Berlian_Laju_Tanker_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BLTZ.JK",
+    "nama_perusahaan": "Graha_Layar_Prima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BMAS.JK",
+    "nama_perusahaan": "Bank_Maspion_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BMRI.JK",
+    "nama_perusahaan": "Bank_Mandiri_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BMSR.JK",
+    "nama_perusahaan": "Bintang_Mitra_Semestaraya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BMTR.JK",
+    "nama_perusahaan": "Global_Mediacom_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BNBA.JK",
+    "nama_perusahaan": "Bank_Bumi_Arta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BNBR.JK",
+    "nama_perusahaan": "Bakrie_&_Brothers_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BNGA.JK",
+    "nama_perusahaan": "Bank_CIMB_Niaga_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BNII.JK",
+    "nama_perusahaan": "Bank_Maybank_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BNLI.JK",
+    "nama_perusahaan": "Bank_Permata_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BOLT.JK",
+    "nama_perusahaan": "Garuda_Metalindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BPFI.JK",
+    "nama_perusahaan": "Woori_Finance_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BPII.JK",
+    "nama_perusahaan": "Batavia_Prosperindo_Internasio",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BRAM.JK",
+    "nama_perusahaan": "Indo_Kordsa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BRMS.JK",
+    "nama_perusahaan": "Bumi_Resources_Minerals_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BRNA.JK",
+    "nama_perusahaan": "Berlina_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BRPT.JK",
+    "nama_perusahaan": "Barito_Pacific_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BSDE.JK",
+    "nama_perusahaan": "Bumi_Serpong_Damai_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BSIM.JK",
+    "nama_perusahaan": "Bank_Sinarmas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BSSR.JK",
+    "nama_perusahaan": "Baramulti_Suksessarana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BSWD.JK",
+    "nama_perusahaan": "Bank_Of_India_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BTEK.JK",
+    "nama_perusahaan": "Bumi_Teknokultura_Unggul_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BTEL.JK",
+    "nama_perusahaan": "Bakrie_Telecom_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BTON.JK",
+    "nama_perusahaan": "Betonjaya_Manunggal_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BTPN.JK",
+    "nama_perusahaan": "Bank_SMBC_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BUDI.JK",
+    "nama_perusahaan": "Budi_Starch_&_Sweetener_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BUKK.JK",
+    "nama_perusahaan": "Bukaka_Teknik_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BULL.JK",
+    "nama_perusahaan": "Buana_Lintas_Lautan_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BUMI.JK",
+    "nama_perusahaan": "Bumi_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BUVA.JK",
+    "nama_perusahaan": "Bukit_Uluwatu_Villa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BVIC.JK",
+    "nama_perusahaan": "Bank_Victoria_International_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BWPT.JK",
+    "nama_perusahaan": "Eagle_High_Plantations_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BYAN.JK",
+    "nama_perusahaan": "Bayan_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CANI.JK",
+    "nama_perusahaan": "Capitol_Nusantara_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CASS.JK",
+    "nama_perusahaan": "Cardig_Aero_Services_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CEKA.JK",
+    "nama_perusahaan": "Wilmar_Cahaya_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CENT.JK",
+    "nama_perusahaan": "Centratama_Telekomunikasi_Indo",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CFIN.JK",
+    "nama_perusahaan": "Clipan_Finance_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CINT.JK",
+    "nama_perusahaan": "Chitose_Internasional_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CITA.JK",
+    "nama_perusahaan": "Cita_Mineral_Investindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CLPI.JK",
+    "nama_perusahaan": "Colorpak_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CMNP.JK",
+    "nama_perusahaan": "Citra_Marga_Nusaphala_Persada_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CMPP.JK",
+    "nama_perusahaan": "AirAsia_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CNKO.JK",
+    "nama_perusahaan": "Exploitasi_Energi_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CNTX.JK",
+    "nama_perusahaan": "Century_Textile_Industry_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "COWL.JK",
+    "nama_perusahaan": "Cowell_Development_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CPIN.JK",
+    "nama_perusahaan": "Charoen_Pokphand_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CPRO.JK",
+    "nama_perusahaan": "Central_Proteina_Prima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CSAP.JK",
+    "nama_perusahaan": "Catur_Sentosa_Adiprana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CTBN.JK",
+    "nama_perusahaan": "Citra_Tubindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CTRA.JK",
+    "nama_perusahaan": "Ciputra_Development_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CTTH.JK",
+    "nama_perusahaan": "Citatah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DART.JK",
+    "nama_perusahaan": "Duta_Anggada_Realty_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DEFI.JK",
+    "nama_perusahaan": "Danasupra_Erapacific_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DEWA.JK",
+    "nama_perusahaan": "Darma_Henwa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DGIK.JK",
+    "nama_perusahaan": "Nusa_Konstruksi_Enjiniring_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DILD.JK",
+    "nama_perusahaan": "Intiland_Development_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DKFT.JK",
+    "nama_perusahaan": "Central_Omega_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DLTA.JK",
+    "nama_perusahaan": "Delta_Djakarta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DMAS.JK",
+    "nama_perusahaan": "Puradelta_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DNAR.JK",
+    "nama_perusahaan": "Bank_Oke_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DNET.JK",
+    "nama_perusahaan": "Indoritel_Makmur_Internasional",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DOID.JK",
+    "nama_perusahaan": "Delta_Dunia_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DPNS.JK",
+    "nama_perusahaan": "Duta_Pertiwi_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DSFI.JK",
+    "nama_perusahaan": "Dharma_Samudera_Fishing_Indust",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DSNG.JK",
+    "nama_perusahaan": "Dharma_Satya_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DSSA.JK",
+    "nama_perusahaan": "Dian_Swastatika_Sentosa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DUTI.JK",
+    "nama_perusahaan": "Duta_Pertiwi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DVLA.JK",
+    "nama_perusahaan": "Darya-Varia_Laboratoria_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DYAN.JK",
+    "nama_perusahaan": "Dyandra_Media_International_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ECII.JK",
+    "nama_perusahaan": "Electronic_City_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EKAD.JK",
+    "nama_perusahaan": "Ekadharma_International_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ELSA.JK",
+    "nama_perusahaan": "Elnusa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ELTY.JK",
+    "nama_perusahaan": "Bakrieland_Development_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EMDE.JK",
+    "nama_perusahaan": "Megapolitan_Developments_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EMTK.JK",
+    "nama_perusahaan": "Elang_Mahkota_Teknologi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ENRG.JK",
+    "nama_perusahaan": "Energi_Mega_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EPMT.JK",
+    "nama_perusahaan": "Enseval_Putera_Megatrading_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ERAA.JK",
+    "nama_perusahaan": "Erajaya_Swasembada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ERTX.JK",
+    "nama_perusahaan": "Eratex_Djaja_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ESSA.JK",
+    "nama_perusahaan": "ESSA_Industries_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ESTI.JK",
+    "nama_perusahaan": "Ever_Shine_Tex_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ETWA.JK",
+    "nama_perusahaan": "Eterindo_Wahanatama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EXCL.JK",
+    "nama_perusahaan": "XL_Axiata_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FAST.JK",
+    "nama_perusahaan": "Fast_Food_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FASW.JK",
+    "nama_perusahaan": "Fajar_Surya_Wisesa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FISH.JK",
+    "nama_perusahaan": "FKS_Multi_Agro_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FMII.JK",
+    "nama_perusahaan": "Fortune_Mate_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FORU.JK",
+    "nama_perusahaan": "Fortune_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FPNI.JK",
+    "nama_perusahaan": "Lotte_Chemical_Titan_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FREN.JK",
+    "nama_perusahaan": "Smartfren_Telecom_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GAMA.JK",
+    "nama_perusahaan": "Aksara_Global_Development_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GDST.JK",
+    "nama_perusahaan": "Gunawan_Dianjaya_Steel_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GDYR.JK",
+    "nama_perusahaan": "Goodyear_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GEMA.JK",
+    "nama_perusahaan": "Gema_Grahasarana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GEMS.JK",
+    "nama_perusahaan": "Golden_Energy_Mines_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GGRM.JK",
+    "nama_perusahaan": "Gudang_Garam_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GIAA.JK",
+    "nama_perusahaan": "Garuda_Indonesia_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GJTL.JK",
+    "nama_perusahaan": "Gajah_Tunggal_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GLOB.JK",
+    "nama_perusahaan": "Globe_Kita_Terang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GMTD.JK",
+    "nama_perusahaan": "Gowa_Makassar_Tourism_Developm",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GOLD.JK",
+    "nama_perusahaan": "Visi_Telekomunikasi_Infrastruk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GOLL.JK",
+    "nama_perusahaan": "Golden_Plantation_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GPRA.JK",
+    "nama_perusahaan": "Perdana_Gapuraprima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GSMF.JK",
+    "nama_perusahaan": "Equity_Development_Investment_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GTBO.JK",
+    "nama_perusahaan": "Garda_Tujuh_Buana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GWSA.JK",
+    "nama_perusahaan": "Greenwood_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GZCO.JK",
+    "nama_perusahaan": "Gozco_Plantations_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HADE.JK",
+    "nama_perusahaan": "Himalaya_Energi_Perkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HDFA.JK",
+    "nama_perusahaan": "Radana_Bhaskara_Finance_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HDTX.JK",
+    "nama_perusahaan": "Panasia_Indo_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HERO.JK",
+    "nama_perusahaan": "DFI_Retail_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HEXA.JK",
+    "nama_perusahaan": "Hexindo_Adiperkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HITS.JK",
+    "nama_perusahaan": "Humpuss_Intermoda_Transportasi",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HMSP.JK",
+    "nama_perusahaan": "HM_Sampoerna_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HOME.JK",
+    "nama_perusahaan": "Hotel_Mandarine_Regency_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HOTL.JK",
+    "nama_perusahaan": "Saraswati_Griya_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HRUM.JK",
+    "nama_perusahaan": "Harum_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IATA.JK",
+    "nama_perusahaan": "MNC_Energy_Investments_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IBFN.JK",
+    "nama_perusahaan": "Intan_Baru_Prana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IBST.JK",
+    "nama_perusahaan": "Inti_Bangun_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ICBP.JK",
+    "nama_perusahaan": "Indofood_CBP_Sukses_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ICON.JK",
+    "nama_perusahaan": "Island_Concepts_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IGAR.JK",
+    "nama_perusahaan": "Champion_Pacific_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IIKP.JK",
+    "nama_perusahaan": "Inti_Agri_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IKAI.JK",
+    "nama_perusahaan": "Intikeramik_Alamasri_Industri_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IKBI.JK",
+    "nama_perusahaan": "Sumi_Indo_Kabel_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IMAS.JK",
+    "nama_perusahaan": "Indomobil_Sukses_Internasional",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IMJS.JK",
+    "nama_perusahaan": "Indomobil_Multi_Jasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IMPC.JK",
+    "nama_perusahaan": "Impack_Pratama_Industri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INAF.JK",
+    "nama_perusahaan": "Indofarma_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INAI.JK",
+    "nama_perusahaan": "Indal_Aluminium_Industry_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INCI.JK",
+    "nama_perusahaan": "Intanwijaya_Internasional_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INCO.JK",
+    "nama_perusahaan": "Vale_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INDF.JK",
+    "nama_perusahaan": "Indofood_Sukses_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INDR.JK",
+    "nama_perusahaan": "Indo-Rama_Synthetics_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INDS.JK",
+    "nama_perusahaan": "Indospring_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INDX.JK",
+    "nama_perusahaan": "Tanah_Laut_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INDY.JK",
+    "nama_perusahaan": "Indika_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INKP.JK",
+    "nama_perusahaan": "Indah_Kiat_Pulp_&_Paper_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INPC.JK",
+    "nama_perusahaan": "Bank_Artha_Graha_Internasional",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INPP.JK",
+    "nama_perusahaan": "Indonesian_Paradise_Property_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INRU.JK",
+    "nama_perusahaan": "Toba_Pulp_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INTA.JK",
+    "nama_perusahaan": "Intraco_Penta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INTD.JK",
+    "nama_perusahaan": "Inter_Delta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INTP.JK",
+    "nama_perusahaan": "Indocement_Tunggal_Prakarsa_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IPOL.JK",
+    "nama_perusahaan": "Indopoly_Swakarsa_Industry_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ISAT.JK",
+    "nama_perusahaan": "Indosat_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ISSP.JK",
+    "nama_perusahaan": "Steel_Pipe_Industry_of_Indones",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ITMA.JK",
+    "nama_perusahaan": "Sumber_Energi_Andalan_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ITMG.JK",
+    "nama_perusahaan": "Indo_Tambangraya_Megah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JAWA.JK",
+    "nama_perusahaan": "Jaya_Agra_Wattie_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JECC.JK",
+    "nama_perusahaan": "Jembo_Cable_Company_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JIHD.JK",
+    "nama_perusahaan": "Jakarta_International_Hotels_&",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JKON.JK",
+    "nama_perusahaan": "Jaya_Konstruksi_Manggala_Prata",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JKSW.JK",
+    "nama_perusahaan": "Jakarta_Kyoei_Steel_Works_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JPFA.JK",
+    "nama_perusahaan": "Japfa_Comfeed_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JRPT.JK",
+    "nama_perusahaan": "Jaya_Real_Property_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JSMR.JK",
+    "nama_perusahaan": "Jasa_Marga_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JSPT.JK",
+    "nama_perusahaan": "Jakarta_Setiabudi_Internasiona",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JTPE.JK",
+    "nama_perusahaan": "Jasuindo_Tiga_Perkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KAEF.JK",
+    "nama_perusahaan": "Kimia_Farma_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KARW.JK",
+    "nama_perusahaan": "Meratus_Jasa_Prima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KBLI.JK",
+    "nama_perusahaan": "KMI_Wire_&_Cable_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KBLM.JK",
+    "nama_perusahaan": "Kabelindo_Murni_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KBLV.JK",
+    "nama_perusahaan": "First_Media_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KBRI.JK",
+    "nama_perusahaan": "Kertas_Basuki_Rachmat_Indonesi",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KDSI.JK",
+    "nama_perusahaan": "Kedawung_Setia_Industrial_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KIAS.JK",
+    "nama_perusahaan": "Keramika_Indonesia_Assosiasi_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KICI.JK",
+    "nama_perusahaan": "Kedaung_Indah_Can_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KIJA.JK",
+    "nama_perusahaan": "Kawasan_Industri_Jababeka_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KKGI.JK",
+    "nama_perusahaan": "Resource_Alam_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KLBF.JK",
+    "nama_perusahaan": "Kalbe_Farma_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KOBX.JK",
+    "nama_perusahaan": "Kobexindo_Tractors_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KOIN.JK",
+    "nama_perusahaan": "Kokoh_Inti_Arebama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KONI.JK",
+    "nama_perusahaan": "Perdana_Bangun_Pusaka_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KOPI.JK",
+    "nama_perusahaan": "Mitra_Energi_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KPIG.JK",
+    "nama_perusahaan": "MNC_Land_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KRAH.JK",
+    "nama_perusahaan": "Grand_Kartech_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KRAS.JK",
+    "nama_perusahaan": "Krakatau_Steel_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KREN.JK",
+    "nama_perusahaan": "Quantum_Clovera_Investama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LAPD.JK",
+    "nama_perusahaan": "Leyand_International_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LCGP.JK",
+    "nama_perusahaan": "Eureka_Prima_Jakarta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LEAD.JK",
+    "nama_perusahaan": "Logindo_Samudramakmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LINK.JK",
+    "nama_perusahaan": "Link_Net_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LION.JK",
+    "nama_perusahaan": "Lion_Metal_Works_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LMAS.JK",
+    "nama_perusahaan": "Limas_Indonesia_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LMPI.JK",
+    "nama_perusahaan": "Langgeng_Makmur_Industri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LMSH.JK",
+    "nama_perusahaan": "Lionmesh_Prima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LPCK.JK",
+    "nama_perusahaan": "Lippo_Cikarang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LPGI.JK",
+    "nama_perusahaan": "Lippo_General_Insurance_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LPIN.JK",
+    "nama_perusahaan": "Multi_Prima_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LPKR.JK",
+    "nama_perusahaan": "Lippo_Karawaci_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LPLI.JK",
+    "nama_perusahaan": "Star_Pacific_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LPPF.JK",
+    "nama_perusahaan": "Matahari_Department_Store_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LPPS.JK",
+    "nama_perusahaan": "Lenox_Pasifik_Investama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LRNA.JK",
+    "nama_perusahaan": "Eka_Sari_Lorena_Transport_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LSIP.JK",
+    "nama_perusahaan": "PP_London_Sumatra_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LTLS.JK",
+    "nama_perusahaan": "Lautan_Luas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAGP.JK",
+    "nama_perusahaan": "Multi_Agro_Gemilang_Plantation",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAIN.JK",
+    "nama_perusahaan": "Malindo_Feedmill_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAMI.JK",
+    "nama_perusahaan": "Mas_Murni_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAPI.JK",
+    "nama_perusahaan": "Mitra_Adiperkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MASA.JK",
+    "nama_perusahaan": "Multistrada_Arah_Sarana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAYA.JK",
+    "nama_perusahaan": "Bank_Mayapada_Internasional_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MBAP.JK",
+    "nama_perusahaan": "Mitrabara_Adiperdana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MBSS.JK",
+    "nama_perusahaan": "Mitrabahtera_Segara_Sejati_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MBTO.JK",
+    "nama_perusahaan": "Martina_Berto_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MCOR.JK",
+    "nama_perusahaan": "Bank_China_Construction_Bank_I",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MDIA.JK",
+    "nama_perusahaan": "Intermedia_Capital_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MDKA.JK",
+    "nama_perusahaan": "Merdeka_Copper_Gold_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MDLN.JK",
+    "nama_perusahaan": "Modernland_Realty_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MDRN.JK",
+    "nama_perusahaan": "Modern_Internasional_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MEDC.JK",
+    "nama_perusahaan": "Medco_Energi_Internasional_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MEGA.JK",
+    "nama_perusahaan": "Bank_Mega_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MERK.JK",
+    "nama_perusahaan": "Merck_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "META.JK",
+    "nama_perusahaan": "Nusantara_Infrastructure_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MFIN.JK",
+    "nama_perusahaan": "Mandala_Multifinance_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MFMI.JK",
+    "nama_perusahaan": "Multifiling_Mitra_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MGNA.JK",
+    "nama_perusahaan": "Magna_Investama_Mandiri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MICE.JK",
+    "nama_perusahaan": "Multi_Indocitra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MIDI.JK",
+    "nama_perusahaan": "Midi_Utama_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MIKA.JK",
+    "nama_perusahaan": "Mitra_Keluarga_Karyasehat_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MIRA.JK",
+    "nama_perusahaan": "Mitra_International_Resources_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MITI.JK",
+    "nama_perusahaan": "Mitra_Investindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MKPI.JK",
+    "nama_perusahaan": "Metropolitan_Kentjana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MLBI.JK",
+    "nama_perusahaan": "Multi_Bintang_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MLIA.JK",
+    "nama_perusahaan": "Mulia_Industrindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MLPL.JK",
+    "nama_perusahaan": "Multipolar_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MLPT.JK",
+    "nama_perusahaan": "Multipolar_Technology_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MMLP.JK",
+    "nama_perusahaan": "Mega_Manunggal_Property_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MNCN.JK",
+    "nama_perusahaan": "Media_Nusantara_Citra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MPMX.JK",
+    "nama_perusahaan": "Mitra_Pinasthika_Mustika_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MPPA.JK",
+    "nama_perusahaan": "Matahari_Putra_Prima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MRAT.JK",
+    "nama_perusahaan": "Mustika_Ratu_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MREI.JK",
+    "nama_perusahaan": "Maskapai_Reasuransi_Indonesia_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MSKY.JK",
+    "nama_perusahaan": "MNC_Sky_Vision_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTDL.JK",
+    "nama_perusahaan": "Metrodata_Electronics_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTFN.JK",
+    "nama_perusahaan": "Capitalinc_Investment_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTLA.JK",
+    "nama_perusahaan": "Metropolitan_Land_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTSM.JK",
+    "nama_perusahaan": "Metro_Realty_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MYOH.JK",
+    "nama_perusahaan": "Samindo_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MYOR.JK",
+    "nama_perusahaan": "Mayora_Indah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MYRX.JK",
+    "nama_perusahaan": "Hanson_International_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MYTX.JK",
+    "nama_perusahaan": "Asia_Pacific_Investama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NELY.JK",
+    "nama_perusahaan": "Pelayaran_Nelly_Dwi_Putri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NIKL.JK",
+    "nama_perusahaan": "Pelat_Timah_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NIPS.JK",
+    "nama_perusahaan": "Nipress_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NIRO.JK",
+    "nama_perusahaan": "City_Retail_Developments_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NISP.JK",
+    "nama_perusahaan": "Bank_OCBC_NISP_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NOBU.JK",
+    "nama_perusahaan": "Bank_Nationalnobu_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NRCA.JK",
+    "nama_perusahaan": "Nusa_Raya_Cipta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OCAP.JK",
+    "nama_perusahaan": "Onix_Capital_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OKAS.JK",
+    "nama_perusahaan": "Ancora_Indonesia_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OMRE.JK",
+    "nama_perusahaan": "Indonesia_Prima_Property_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PADI.JK",
+    "nama_perusahaan": "Minna_Padi_Investama_Sekuritas",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PALM.JK",
+    "nama_perusahaan": "Provident_Investasi_Bersama_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PANR.JK",
+    "nama_perusahaan": "Panorama_Sentrawisata_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PANS.JK",
+    "nama_perusahaan": "Panin_Sekuritas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PBRX.JK",
+    "nama_perusahaan": "Pan_Brothers_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PDES.JK",
+    "nama_perusahaan": "Destinasi_Tirta_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PEGE.JK",
+    "nama_perusahaan": "Panca_Global_Kapital_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PGAS.JK",
+    "nama_perusahaan": "Perusahaan_Gas_Negara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PGLI.JK",
+    "nama_perusahaan": "Pembangunan_Graha_Lestari_Inda",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PICO.JK",
+    "nama_perusahaan": "Pelangi_Indah_Canindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PJAA.JK",
+    "nama_perusahaan": "Pembangunan_Jaya_Ancol_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PKPK.JK",
+    "nama_perusahaan": "Perdana_Karya_Perkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PLAS.JK",
+    "nama_perusahaan": "Polaris_Investama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PLIN.JK",
+    "nama_perusahaan": "Plaza_Indonesia_Realty_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PNBN.JK",
+    "nama_perusahaan": "Bank_Pan_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PNBS.JK",
+    "nama_perusahaan": "Bank_Panin_Dubai_Syariah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PNIN.JK",
+    "nama_perusahaan": "Paninvest_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PNLF.JK",
+    "nama_perusahaan": "Panin_Financial_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PNSE.JK",
+    "nama_perusahaan": "Pudjiadi_&_Sons_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "POLY.JK",
+    "nama_perusahaan": "Asia_Pacific_Fibers_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "POOL.JK",
+    "nama_perusahaan": "Pool_Advista_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PPRO.JK",
+    "nama_perusahaan": "PP_Properti_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PRAS.JK",
+    "nama_perusahaan": "Prima_Alloy_Steel_Universal_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PSAB.JK",
+    "nama_perusahaan": "J_Resources_Asia_Pasifik_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PSDN.JK",
+    "nama_perusahaan": "Prasidha_Aneka_Niaga_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PSKT.JK",
+    "nama_perusahaan": "Red_Planet_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTBA.JK",
+    "nama_perusahaan": "Bukit_Asam_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTIS.JK",
+    "nama_perusahaan": "Indo_Straits_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTPP.JK",
+    "nama_perusahaan": "PP_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTRO.JK",
+    "nama_perusahaan": "Petrosea_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTSN.JK",
+    "nama_perusahaan": "Sat_Nusapersada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTSP.JK",
+    "nama_perusahaan": "Pioneerindo_Gourmet_Internatio",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PUDP.JK",
+    "nama_perusahaan": "Pudjiadi_Prestige_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PWON.JK",
+    "nama_perusahaan": "Pakuwon_Jati_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PYFA.JK",
+    "nama_perusahaan": "Pyridam_Farma_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RAJA.JK",
+    "nama_perusahaan": "Rukun_Raharja_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RALS.JK",
+    "nama_perusahaan": "Ramayana_Lestari_Sentosa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RANC.JK",
+    "nama_perusahaan": "Supra_Boga_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RBMS.JK",
+    "nama_perusahaan": "Ristia_Bintang_Mahkotasejati_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RDTX.JK",
+    "nama_perusahaan": "Roda_Vivatex_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RELI.JK",
+    "nama_perusahaan": "Reliance_Sekuritas_Indonesia_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RICY.JK",
+    "nama_perusahaan": "Ricky_Putra_Globalindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RIGS.JK",
+    "nama_perusahaan": "Rig_Tenders_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RIMO.JK",
+    "nama_perusahaan": "Rimo_International_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RODA.JK",
+    "nama_perusahaan": "Pikko_Land_Development_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ROTI.JK",
+    "nama_perusahaan": "Nippon_Indosari_Corpindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RUIS.JK",
+    "nama_perusahaan": "Radiant_Utama_Interinsco_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SAFE.JK",
+    "nama_perusahaan": "Steady_Safe_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SAME.JK",
+    "nama_perusahaan": "Sarana_Meditama_Metropolitan_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SCCO.JK",
+    "nama_perusahaan": "Supreme_Cable_Manufacturing_&_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SCMA.JK",
+    "nama_perusahaan": "Surya_Citra_Media_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SCPI.JK",
+    "nama_perusahaan": "Organon_Pharma_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SDMU.JK",
+    "nama_perusahaan": "Sidomulyo_Selaras_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SDPC.JK",
+    "nama_perusahaan": "Millennium_Pharmacon_Internati",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SDRA.JK",
+    "nama_perusahaan": "Bank_Woori_Saudara_Indonesia_1",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SGRO.JK",
+    "nama_perusahaan": "Sampoerna_Agro_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SHID.JK",
+    "nama_perusahaan": "Hotel_Sahid_Jaya_International",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SIDO.JK",
+    "nama_perusahaan": "Industri_Jamu_dan_Farmasi_Sido",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SILO.JK",
+    "nama_perusahaan": "Siloam_International_Hospitals",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SIMA.JK",
+    "nama_perusahaan": "Siwani_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SIMP.JK",
+    "nama_perusahaan": "Salim_Ivomas_Pratama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SIPD.JK",
+    "nama_perusahaan": "Sreeya_Sewu_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SKBM.JK",
+    "nama_perusahaan": "Sekar_Bumi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SKLT.JK",
+    "nama_perusahaan": "Sekar_Laut_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SKYB.JK",
+    "nama_perusahaan": "Northcliff_Citranusa_Indonesia",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMAR.JK",
+    "nama_perusahaan": "Smart_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMBR.JK",
+    "nama_perusahaan": "Semen_Baturaja_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMCB.JK",
+    "nama_perusahaan": "Solusi_Bangun_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMDM.JK",
+    "nama_perusahaan": "Suryamas_Dutamakmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMDR.JK",
+    "nama_perusahaan": "Samudera_Indonesia__Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMGR.JK",
+    "nama_perusahaan": "Semen_Indonesia_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMMA.JK",
+    "nama_perusahaan": "Sinarmas_Multiartha_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMMT.JK",
+    "nama_perusahaan": "Golden_Eagle_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMRA.JK",
+    "nama_perusahaan": "Summarecon_Agung_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMRU.JK",
+    "nama_perusahaan": "SMR_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMSM.JK",
+    "nama_perusahaan": "Selamat_Sempurna_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SOCI.JK",
+    "nama_perusahaan": "Soechi_Lines_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SONA.JK",
+    "nama_perusahaan": "Sona_Topas_Tourism_Industry_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SPMA.JK",
+    "nama_perusahaan": "Suparma_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SQMI.JK",
+    "nama_perusahaan": "Wilton_Makmur_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SRAJ.JK",
+    "nama_perusahaan": "Sejahteraraya_Anugrahjaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SRIL.JK",
+    "nama_perusahaan": "Sri_Rejeki_Isman_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SRSN.JK",
+    "nama_perusahaan": "Indo_Acidatama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SRTG.JK",
+    "nama_perusahaan": "Saratoga_Investama_Sedaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SSIA.JK",
+    "nama_perusahaan": "Surya_Semesta_Internusa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SSMS.JK",
+    "nama_perusahaan": "Sawit_Sumbermas_Sarana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SSTM.JK",
+    "nama_perusahaan": "Sunson_Textile_Manufacture_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "STAR.JK",
+    "nama_perusahaan": "Buana_Artha_Anugerah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "STTP.JK",
+    "nama_perusahaan": "Siantar_Top_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SUGI.JK",
+    "nama_perusahaan": "Sugih_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SULI.JK",
+    "nama_perusahaan": "SLJ_Global_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SUPR.JK",
+    "nama_perusahaan": "Solusi_Tunas_Pratama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TALF.JK",
+    "nama_perusahaan": "Tunas_Alfin_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TARA.JK",
+    "nama_perusahaan": "Agung_Semesta_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TAXI.JK",
+    "nama_perusahaan": "Express_Transindo_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TBIG.JK",
+    "nama_perusahaan": "Tower_Bersama_Infrastructure_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TBLA.JK",
+    "nama_perusahaan": "Tunas_Baru_Lampung_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TBMS.JK",
+    "nama_perusahaan": "Tembaga_Mulia_Semanan_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TCID.JK",
+    "nama_perusahaan": "Mandom_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TELE.JK",
+    "nama_perusahaan": "Omni_Inovasi_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TFCO.JK",
+    "nama_perusahaan": "Tifico_Fiber_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TGKA.JK",
+    "nama_perusahaan": "Tigaraksa_Satria_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TIFA.JK",
+    "nama_perusahaan": "KDB_Tifa_Finance_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TINS.JK",
+    "nama_perusahaan": "Timah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TIRA.JK",
+    "nama_perusahaan": "Tira_Austenite_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TIRT.JK",
+    "nama_perusahaan": "Tirta_Mahakam_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TKIM.JK",
+    "nama_perusahaan": "Pabrik_Kertas_Tjiwi_Kimia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TLKM.JK",
+    "nama_perusahaan": "Telkom_Indonesia_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TMAS.JK",
+    "nama_perusahaan": "Temas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TMPO.JK",
+    "nama_perusahaan": "Tempo_Intimedia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TOBA.JK",
+    "nama_perusahaan": "TBS_Energi_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TOTL.JK",
+    "nama_perusahaan": "Total_Bangun_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TOTO.JK",
+    "nama_perusahaan": "Surya_Toto_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TOWR.JK",
+    "nama_perusahaan": "Sarana_Menara_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TPIA.JK",
+    "nama_perusahaan": "Chandra_Asri_Pacific_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TPMA.JK",
+    "nama_perusahaan": "Trans_Power_Marine_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRAM.JK",
+    "nama_perusahaan": "Trada_Alam_Minera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRIL.JK",
+    "nama_perusahaan": "Triwira_Insanlestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRIM.JK",
+    "nama_perusahaan": "Trimegah_Sekuritas_Indonesia_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRIO.JK",
+    "nama_perusahaan": "Trikomsel_Oke_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRIS.JK",
+    "nama_perusahaan": "Trisula_International_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRST.JK",
+    "nama_perusahaan": "Trias_Sentosa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRUS.JK",
+    "nama_perusahaan": "Trust_Finance_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TSPC.JK",
+    "nama_perusahaan": "Tempo_Scan_Pacific_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ULTJ.JK",
+    "nama_perusahaan": "Ultrajaya_Milk_Industry_&_Trad",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UNIC.JK",
+    "nama_perusahaan": "Unggul_Indah_Cahaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UNIT.JK",
+    "nama_perusahaan": "Nusantara_Inti_Corpora_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UNSP.JK",
+    "nama_perusahaan": "Bakrie_Sumatera_Plantations_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UNTR.JK",
+    "nama_perusahaan": "United_Tractors_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UNVR.JK",
+    "nama_perusahaan": "Unilever_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VICO.JK",
+    "nama_perusahaan": "Victoria_Investama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VINS.JK",
+    "nama_perusahaan": "Victoria_Insurance_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VIVA.JK",
+    "nama_perusahaan": "Visi_Media_Asia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VOKS.JK",
+    "nama_perusahaan": "Voksel_Electric_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VRNA.JK",
+    "nama_perusahaan": "Mizuho_Leasing_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WAPO.JK",
+    "nama_perusahaan": "Wahana_Pronatural_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WEHA.JK",
+    "nama_perusahaan": "WEHA_Transportasi_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WICO.JK",
+    "nama_perusahaan": "Wicaksana_Overseas_Internation",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WIIM.JK",
+    "nama_perusahaan": "Wismilak_Inti_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WIKA.JK",
+    "nama_perusahaan": "Wijaya_Karya_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WINS.JK",
+    "nama_perusahaan": "Wintermar_Offshore_Marine_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WOMF.JK",
+    "nama_perusahaan": "Wahana_Ottomitra_Multiartha_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WSKT.JK",
+    "nama_perusahaan": "Waskita_Karya_(Persero)_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WTON.JK",
+    "nama_perusahaan": "Wijaya_Karya_Beton_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "YPAS.JK",
+    "nama_perusahaan": "Yanaprima_Hastapersada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "YULE.JK",
+    "nama_perusahaan": "Yulie_Sekuritas_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ZBRA.JK",
+    "nama_perusahaan": "Dosni_Roha_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SHIP.JK",
+    "nama_perusahaan": "Sillo_Maritime_Perdana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CASA.JK",
+    "nama_perusahaan": "Capital_Financial_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DAYA.JK",
+    "nama_perusahaan": "Duta_Intidaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DPUM.JK",
+    "nama_perusahaan": "Dua_Putra_Utama_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IDPR.JK",
+    "nama_perusahaan": "Indonesia_Pondasi_Raya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JGLE.JK",
+    "nama_perusahaan": "Graha_Andrasentra_Propertindo_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KINO.JK",
+    "nama_perusahaan": "Kino_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MARI.JK",
+    "nama_perusahaan": "Mahaka_Radio_Integra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MKNT.JK",
+    "nama_perusahaan": "Mitra_Komunikasi_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTRA.JK",
+    "nama_perusahaan": "Mitra_Pemuda_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OASA.JK",
+    "nama_perusahaan": "Maharaksa_Biru_Energi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "POWR.JK",
+    "nama_perusahaan": "Cikarang_Listrindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INCF.JK",
+    "nama_perusahaan": "Indo_Komoditi_Korpora_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WSBP.JK",
+    "nama_perusahaan": "Waskita_Beton_Precast_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PBSA.JK",
+    "nama_perusahaan": "Paramita_Bangun_Sarana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PRDA.JK",
+    "nama_perusahaan": "Prodia_Widyahusada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BOGA.JK",
+    "nama_perusahaan": "Bintang_Oto_Global_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BRIS.JK",
+    "nama_perusahaan": "Bank_Syariah_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PORT.JK",
+    "nama_perusahaan": "Nusantara_Pelabuhan_Handal_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CARS.JK",
+    "nama_perusahaan": "Industri_dan_Perdagangan_Bintr",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MINA.JK",
+    "nama_perusahaan": "Sanurhasta_Mitra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FORZ.JK",
+    "nama_perusahaan": "Forza_Land_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CLEO.JK",
+    "nama_perusahaan": "Sariguna_Primatirta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TAMU.JK",
+    "nama_perusahaan": "Pelayaran_Tamarin_Samudra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CSIS.JK",
+    "nama_perusahaan": "Cahayasakti_Investindo_Sukses_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TGRA.JK",
+    "nama_perusahaan": "Terregra_Asia_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FIRE.JK",
+    "nama_perusahaan": "Alfa_Energi_Investama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TOPS.JK",
+    "nama_perusahaan": "Totalindo_Eka_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KMTR.JK",
+    "nama_perusahaan": "Kirana_Megatara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARMY.JK",
+    "nama_perusahaan": "Armidian_Karyatama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAPB.JK",
+    "nama_perusahaan": "MAP_Boga_Adiperkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WOOD.JK",
+    "nama_perusahaan": "Integra_Indocabinet_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HRTA.JK",
+    "nama_perusahaan": "Hartadinata_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MABA.JK",
+    "nama_perusahaan": "Marga_Abhinaya_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HOKI.JK",
+    "nama_perusahaan": "Buyung_Poetra_Sembada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MPOW.JK",
+    "nama_perusahaan": "Megapower_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MARK.JK",
+    "nama_perusahaan": "Mark_Dynamics_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NASA.JK",
+    "nama_perusahaan": "Andalan_Perkasa_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MDKI.JK",
+    "nama_perusahaan": "Emdeki_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BELL.JK",
+    "nama_perusahaan": "Trisula_Textile_Industries_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KIOS.JK",
+    "nama_perusahaan": "Kioson_Komersial_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GMFI.JK",
+    "nama_perusahaan": "Garuda_Maintenance_Facility_Ae",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTWI.JK",
+    "nama_perusahaan": "Malacca_Trust_Wuwungan_Insuran",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ZINC.JK",
+    "nama_perusahaan": "Kapuas_Prima_Coal_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MCAS.JK",
+    "nama_perusahaan": "M_Cash_Integrasi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PPRE.JK",
+    "nama_perusahaan": "PP_Presisi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WEGE.JK",
+    "nama_perusahaan": "Wijaya_Karya_Bangunan_Gedung_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PSSI.JK",
+    "nama_perusahaan": "IMC_Pelita_Logistik_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MORA.JK",
+    "nama_perusahaan": "Mora_Telematika_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DWGL.JK",
+    "nama_perusahaan": "Dwi_Guna_Laksana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PBID.JK",
+    "nama_perusahaan": "Panca_Budi_Idaman_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JMAS.JK",
+    "nama_perusahaan": "Asuransi_Jiwa_Syariah_Jasa_Mit",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CAMP.JK",
+    "nama_perusahaan": "Campina_Ice_Cream_Industry_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IPCM.JK",
+    "nama_perusahaan": "Jasa_Armada_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PCAR.JK",
+    "nama_perusahaan": "Prima_Cakrawala_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LCKM.JK",
+    "nama_perusahaan": "LCK_Global_Kedaton_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BOSS.JK",
+    "nama_perusahaan": "Borneo_Olah_Sarana_Sukses_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HELI.JK",
+    "nama_perusahaan": "Jaya_Trishindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JSKY.JK",
+    "nama_perusahaan": "Sky_Energy_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INPS.JK",
+    "nama_perusahaan": "Indah_Prakasa_Sentosa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GHON.JK",
+    "nama_perusahaan": "Gihon_Telekomunikasi_Indonesia",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TDPM.JK",
+    "nama_perusahaan": "Tianrong_Chemicals_Industry_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DFAM.JK",
+    "nama_perusahaan": "Dafam_Property_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NICK.JK",
+    "nama_perusahaan": "Charnic_Capital_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BTPS.JK",
+    "nama_perusahaan": "Bank_BTPN_Syariah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SPTO.JK",
+    "nama_perusahaan": "Surya_Pertiwi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PRIM.JK",
+    "nama_perusahaan": "Royal_Prima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HEAL.JK",
+    "nama_perusahaan": "Medikaloka_Hermina_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRUK.JK",
+    "nama_perusahaan": "Guna_Timur_Raya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PZZA.JK",
+    "nama_perusahaan": "Sarimelati_Kencana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TUGU.JK",
+    "nama_perusahaan": "Asuransi_Tugu_Pratama_Indonesi",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MSIN.JK",
+    "nama_perusahaan": "MNC_Digital_Entertainment_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SWAT.JK",
+    "nama_perusahaan": "Sriwahana_Adityakarta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KPAL.JK",
+    "nama_perusahaan": "Steadfast_Marine_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TNCA.JK",
+    "nama_perusahaan": "Trimuda_Nuansa_Citra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAPA.JK",
+    "nama_perusahaan": "Map_Aktif_Adiperkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TCPI.JK",
+    "nama_perusahaan": "Transcoal_Pacific_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IPCC.JK",
+    "nama_perusahaan": "Indonesia_Kendaraan_Terminal_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RISE.JK",
+    "nama_perusahaan": "Jaya_Sukses_Makmur_Sentosa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BPTR.JK",
+    "nama_perusahaan": "Batavia_Prosperindo_Trans_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "POLL.JK",
+    "nama_perusahaan": "Pollux_Properties_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NFCX.JK",
+    "nama_perusahaan": "NFC_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MGRO.JK",
+    "nama_perusahaan": "Mahkota_Group_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NUSA.JK",
+    "nama_perusahaan": "Sinergi_Megah_Internusa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FILM.JK",
+    "nama_perusahaan": "MD_Entertainment_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ANDI.JK",
+    "nama_perusahaan": "Andira_Agro_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LAND.JK",
+    "nama_perusahaan": "Trimitra_Propertindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MOLI.JK",
+    "nama_perusahaan": "Madusari_Murni_Indah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PANI.JK",
+    "nama_perusahaan": "Pantai_Indah_Kapuk_Dua_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DIGI.JK",
+    "nama_perusahaan": "Arkadia_Digital_Media_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CITY.JK",
+    "nama_perusahaan": "Natura_City_Developments_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SAPX.JK",
+    "nama_perusahaan": "Satria_Antaran_Prima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KPAS.JK",
+    "nama_perusahaan": "Cottonindo_Ariesta_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SURE.JK",
+    "nama_perusahaan": "Super_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HKMU.JK",
+    "nama_perusahaan": "HK_Metals_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MPRO.JK",
+    "nama_perusahaan": "Maha_Properti_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DUCK.JK",
+    "nama_perusahaan": "Jaya_Bersama_Indo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GOOD.JK",
+    "nama_perusahaan": "Garudafood_Putra_Putri_Jaya_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SKRN.JK",
+    "nama_perusahaan": "Superkrane_Mitra_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "YELO.JK",
+    "nama_perusahaan": "Yelooo_Integra_Datanet_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CAKK.JK",
+    "nama_perusahaan": "Cahayaputra_Asa_Keramik_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SATU.JK",
+    "nama_perusahaan": "Kota_Satu_Properti_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ZONE.JK",
+    "nama_perusahaan": "Mega_Perintis_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PEHA.JK",
+    "nama_perusahaan": "Phapros_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FOOD.JK",
+    "nama_perusahaan": "Sentra_Food_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BEEF.JK",
+    "nama_perusahaan": "Estika_Tata_Tiara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "POLI.JK",
+    "nama_perusahaan": "Pollux_Hotels_Group_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CLAY.JK",
+    "nama_perusahaan": "Citra_Putra_Realty_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NATO.JK",
+    "nama_perusahaan": "Surya_Permata_Andalan_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JAYA.JK",
+    "nama_perusahaan": "Armada_Berjaya_Trans_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "COCO.JK",
+    "nama_perusahaan": "Wahana_Interfood_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTPS.JK",
+    "nama_perusahaan": "Meta_Epsi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CPRI.JK",
+    "nama_perusahaan": "Capri_Nusa_Satu_Properti_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HRME.JK",
+    "nama_perusahaan": "Menteng_Heritage_Realty_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "POSA.JK",
+    "nama_perusahaan": "Bliss_Properti_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JAST.JK",
+    "nama_perusahaan": "Jasnita_Telekomindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FITT.JK",
+    "nama_perusahaan": "Hotel_Fitra_International_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BOLA.JK",
+    "nama_perusahaan": "Bali_Bintang_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CCSI.JK",
+    "nama_perusahaan": "Communication_Cable_Systems_In",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SFAN.JK",
+    "nama_perusahaan": "Surya_Fajar_Capital_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "POLU.JK",
+    "nama_perusahaan": "Golden_Flower_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KJEN.JK",
+    "nama_perusahaan": "Krida_Jaringan_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KAYU.JK",
+    "nama_perusahaan": "Darmi_Bersaudara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ITIC.JK",
+    "nama_perusahaan": "Indonesian_Tobacco_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PAMG.JK",
+    "nama_perusahaan": "Bima_Sakti_Pertiwi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IPTV.JK",
+    "nama_perusahaan": "MNC_Vision_Networks_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BLUE.JK",
+    "nama_perusahaan": "Berkah_Prima_Perkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ENVY.JK",
+    "nama_perusahaan": "Envy_Technologies_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EAST.JK",
+    "nama_perusahaan": "Eastparc_Hotel_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LIFE.JK",
+    "nama_perusahaan": "MSIG_Life_Insurance_Indonesia_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FUJI.JK",
+    "nama_perusahaan": "Fuji_Finance_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KOTA.JK",
+    "nama_perusahaan": "DMS_Propertindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INOV.JK",
+    "nama_perusahaan": "Inocycle_Technology_Group_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARKA.JK",
+    "nama_perusahaan": "Arkha_Jayanti_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMKL.JK",
+    "nama_perusahaan": "Satyamitra_Kemas_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HDIT.JK",
+    "nama_perusahaan": "Hensel_Davest_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KEEN.JK",
+    "nama_perusahaan": "Kencana_Energi_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BAPI.JK",
+    "nama_perusahaan": "Bhakti_Agung_Propertindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TFAS.JK",
+    "nama_perusahaan": "Telefast_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GGRP.JK",
+    "nama_perusahaan": "Gunung_Raja_Paksi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OPMS.JK",
+    "nama_perusahaan": "Optima_Prima_Metal_Sinergi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NZIA.JK",
+    "nama_perusahaan": "Nusantara_Almazia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SLIS.JK",
+    "nama_perusahaan": "Gaya_Abadi_Sempurna_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PURE.JK",
+    "nama_perusahaan": "Trinitan_Metals_and_Minerals_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IRRA.JK",
+    "nama_perusahaan": "Itama_Ranoraya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DMMX.JK",
+    "nama_perusahaan": "Digital_Mediatama_Maxima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SINI.JK",
+    "nama_perusahaan": "Singaraja_Putra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WOWS.JK",
+    "nama_perusahaan": "Ginting_Jaya_Energi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ESIP.JK",
+    "nama_perusahaan": "Sinergi_Inti_Plastindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TEBE.JK",
+    "nama_perusahaan": "Dana_Brata_Luhur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KEJU.JK",
+    "nama_perusahaan": "Mulia_Boga_Raya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PSGO.JK",
+    "nama_perusahaan": "Palma_Serasih_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AGAR.JK",
+    "nama_perusahaan": "Asia_Sejahtera_Mina_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IFSH.JK",
+    "nama_perusahaan": "Ifishdeco_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "REAL.JK",
+    "nama_perusahaan": "Repower_Asia_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IFII.JK",
+    "nama_perusahaan": "Indonesia_Fibreboard_Industry_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PMJS.JK",
+    "nama_perusahaan": "Putra_Mandiri_Jembar_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UCID.JK",
+    "nama_perusahaan": "Uni-Charm_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GLVA.JK",
+    "nama_perusahaan": "Galva_Technologies_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PGJO.JK",
+    "nama_perusahaan": "Tourindo_Guide_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMAR.JK",
+    "nama_perusahaan": "Bank_Amar_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CSRA.JK",
+    "nama_perusahaan": "Cisadane_Sawit_Raya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INDO.JK",
+    "nama_perusahaan": "Royalindo_Investa_Wijaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMOR.JK",
+    "nama_perusahaan": "Ashmore_Asset_Management_Indon",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRIN.JK",
+    "nama_perusahaan": "Perintis_Triniti_Properti_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DMND.JK",
+    "nama_perusahaan": "Diamond_Food_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PURA.JK",
+    "nama_perusahaan": "Putra_Rajawali_Kencana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTPW.JK",
+    "nama_perusahaan": "Pratama_Widya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TAMA.JK",
+    "nama_perusahaan": "Lancartama_Sejati_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IKAN.JK",
+    "nama_perusahaan": "Era_Mandiri_Cemerlang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AYLS.JK",
+    "nama_perusahaan": "Agro_Yasa_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DADA.JK",
+    "nama_perusahaan": "Diamond_Citra_Propertindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASPI.JK",
+    "nama_perusahaan": "Andalan_Sakti_Primaindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ESTA.JK",
+    "nama_perusahaan": "Esta_Multi_Usaha_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BESS.JK",
+    "nama_perusahaan": "Batulicin_Nusantara_Maritim_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CSMI.JK",
+    "nama_perusahaan": "Cipta_Selera_Murni_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBSS.JK",
+    "nama_perusahaan": "Bumi_Benowo_Sukses_Sejahtera_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BHAT.JK",
+    "nama_perusahaan": "Bhakti_Multi_Artha_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CASH.JK",
+    "nama_perusahaan": "Cashlez_Worldwide_Indonesia_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TECH.JK",
+    "nama_perusahaan": "Indosterling_Technomedia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EPAC.JK",
+    "nama_perusahaan": "Megalestari_Epack_Sentosaraya_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UANG.JK",
+    "nama_perusahaan": "Pakuan_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PGUN.JK",
+    "nama_perusahaan": "Pradiksi_Gunatama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SOFA.JK",
+    "nama_perusahaan": "Boston_Furniture_Industries_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PPGL.JK",
+    "nama_perusahaan": "Prima_Globalindo_Logistik_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TOYS.JK",
+    "nama_perusahaan": "Sunindo_Adipersada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SGER.JK",
+    "nama_perusahaan": "Sumber_Global_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRJA.JK",
+    "nama_perusahaan": "Transkon_Jaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PNGO.JK",
+    "nama_perusahaan": "Pinago_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SCNP.JK",
+    "nama_perusahaan": "Selaras_Citra_Nusantara_Perkas",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BBSI.JK",
+    "nama_perusahaan": "Krom_Bank_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KMDS.JK",
+    "nama_perusahaan": "Kurniamitra_Duta_Sentosa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PURI.JK",
+    "nama_perusahaan": "Puri_Global_Sukses_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SOHO.JK",
+    "nama_perusahaan": "Soho_Global_Health_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HOMI.JK",
+    "nama_perusahaan": "Grand_House_Mulia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ROCK.JK",
+    "nama_perusahaan": "Rockfields_Properti_Indonesia_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ENZO.JK",
+    "nama_perusahaan": "Morenzo_Abadi_Perkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PLAN.JK",
+    "nama_perusahaan": "Planet_Properindo_Jaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTDU.JK",
+    "nama_perusahaan": "Djasa_Ubersakti_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ATAP.JK",
+    "nama_perusahaan": "Trimitra_Prawara_Goldland_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VICI.JK",
+    "nama_perusahaan": "Victoria_Care_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PMMP.JK",
+    "nama_perusahaan": "Panca_Mitra_Multiperdana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WIFI.JK",
+    "nama_perusahaan": "Solusi_Sinergi_Digital_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FAPA.JK",
+    "nama_perusahaan": "FAP_Agri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DCII.JK",
+    "nama_perusahaan": "DCI_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KETR.JK",
+    "nama_perusahaan": "Ketrosden_Triasmitra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DGNS.JK",
+    "nama_perusahaan": "Diagnos_Laboratorium_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UFOE.JK",
+    "nama_perusahaan": "Damai_Sejahtera_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BANK.JK",
+    "nama_perusahaan": "Bank_Aladin_Syariah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WMUU.JK",
+    "nama_perusahaan": "Widodo_Makmur_Unggas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EDGE.JK",
+    "nama_perusahaan": "Indointernet_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UNIQ.JK",
+    "nama_perusahaan": "Ulima_Nitra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BEBS.JK",
+    "nama_perusahaan": "Berkah_Beton_Sadaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SNLK.JK",
+    "nama_perusahaan": "Sunter_Lakeside_Hotel_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ZYRX.JK",
+    "nama_perusahaan": "Zyrexindo_Mandiri_Buana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LFLO.JK",
+    "nama_perusahaan": "Imago_Mulia_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FIMP.JK",
+    "nama_perusahaan": "Fimperkasa_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TAPG.JK",
+    "nama_perusahaan": "Triputra_Agro_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NPGF.JK",
+    "nama_perusahaan": "Nusa_Palapa_Gemilang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LUCY.JK",
+    "nama_perusahaan": "Lima_Dua_Lima_Tiga_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ADCP.JK",
+    "nama_perusahaan": "Adhi_Commuter_Properti_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HOPE.JK",
+    "nama_perusahaan": "Harapan_Duta_Pertiwi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MGLV.JK",
+    "nama_perusahaan": "Panca_Anugrah_Wisesa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRUE.JK",
+    "nama_perusahaan": "Triniti_Dinamik_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LABA.JK",
+    "nama_perusahaan": "Green_Power_Group_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARCI.JK",
+    "nama_perusahaan": "Archi_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IPAC.JK",
+    "nama_perusahaan": "Era_Graharealty_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MASB.JK",
+    "nama_perusahaan": "Bank_Multiarta_Sentosa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BMHS.JK",
+    "nama_perusahaan": "Bundamedik_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FLMC.JK",
+    "nama_perusahaan": "Falmaco_Nonwoven_Industri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NICL.JK",
+    "nama_perusahaan": "PAM_Mineral_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UVCR.JK",
+    "nama_perusahaan": "Trimegah_Karya_Pratama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BUKA.JK",
+    "nama_perusahaan": "Bukalapakcom_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HAIS.JK",
+    "nama_perusahaan": "Hasnur_Internasional_Shipping_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OILS.JK",
+    "nama_perusahaan": "Indo_Oil_Perkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GPSO.JK",
+    "nama_perusahaan": "Geoprima_Solusi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MCOL.JK",
+    "nama_perusahaan": "Prima_Andalan_Mandiri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RSGK.JK",
+    "nama_perusahaan": "Kedoya_Adyaraya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RUNS.JK",
+    "nama_perusahaan": "Global_Sukses_Solusi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SBMA.JK",
+    "nama_perusahaan": "Surya_Biru_Murni_Acetylene_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CMNT.JK",
+    "nama_perusahaan": "Cemindo_Gemilang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GTSI.JK",
+    "nama_perusahaan": "GTS_Internasional_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IDEA.JK",
+    "nama_perusahaan": "Idea_Indonesia_Akademi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KUAS.JK",
+    "nama_perusahaan": "Ace_Oldfields_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BOBA.JK",
+    "nama_perusahaan": "Formosa_Ingredient_Factory_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTEL.JK",
+    "nama_perusahaan": "Dayamitra_Telekomunikasi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DEPO.JK",
+    "nama_perusahaan": "Caturkarda_Depo_Bangunan_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BINO.JK",
+    "nama_perusahaan": "Perma_Plasindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CMRY.JK",
+    "nama_perusahaan": "Cisarua_Mountain_Dairy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WGSH.JK",
+    "nama_perusahaan": "Wira_Global_Solusi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TAYS.JK",
+    "nama_perusahaan": "Jaya_Swarasa_Agung_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WMPP.JK",
+    "nama_perusahaan": "Widodo_Makmur_Perkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RMKE.JK",
+    "nama_perusahaan": "RMK_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OBMD.JK",
+    "nama_perusahaan": "OBM_Drilchem_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AVIA.JK",
+    "nama_perusahaan": "Avia_Avian_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IPPE.JK",
+    "nama_perusahaan": "Indo_Pureco_Pratama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NASI.JK",
+    "nama_perusahaan": "Wahana_Inti_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BSML.JK",
+    "nama_perusahaan": "Bintang_Samudera_Mandiri_Lines",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DRMA.JK",
+    "nama_perusahaan": "Dharma_Polimetal_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ADMR.JK",
+    "nama_perusahaan": "Adaro_Minerals_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SEMA.JK",
+    "nama_perusahaan": "Semacom_Integrated_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASLC.JK",
+    "nama_perusahaan": "Autopedia_Sukses_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NETV.JK",
+    "nama_perusahaan": "MDTV_Media_Technologies_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BAUT.JK",
+    "nama_perusahaan": "Mitra_Angkasa_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ENAK.JK",
+    "nama_perusahaan": "Champ_Resto_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NTBK.JK",
+    "nama_perusahaan": "Nusatama_Berkah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMKM.JK",
+    "nama_perusahaan": "Sumber_Mas_Konstruksi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "STAA.JK",
+    "nama_perusahaan": "Sumber_Tani_Agung_Resources_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NANO.JK",
+    "nama_perusahaan": "Nanotech_Indonesia_Global_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BIKE.JK",
+    "nama_perusahaan": "Sepeda_Bersama_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WIRG.JK",
+    "nama_perusahaan": "WIR_ASIA_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SICO.JK",
+    "nama_perusahaan": "Sigma_Energy_Compressindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GOTO.JK",
+    "nama_perusahaan": "GoTo_Gojek_Tokopedia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TLDN.JK",
+    "nama_perusahaan": "Teladan_Prima_Agro_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MTMH.JK",
+    "nama_perusahaan": "Murni_Sadar_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WINR.JK",
+    "nama_perusahaan": "Winner_Nusantara_Jaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IBOS.JK",
+    "nama_perusahaan": "Indo_Boga_Sukses_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OLIV.JK",
+    "nama_perusahaan": "Oscar_Mitra_Sukses_Sejahtera_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASHA.JK",
+    "nama_perusahaan": "Cilacap_Samudera_Fishing_Indus",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SWID.JK",
+    "nama_perusahaan": "Saraswanti_Indoland_Developmen",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRGU.JK",
+    "nama_perusahaan": "Cerestar_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ARKO.JK",
+    "nama_perusahaan": "Arkora_Hydro_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CHEM.JK",
+    "nama_perusahaan": "Chemstar_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DEWI.JK",
+    "nama_perusahaan": "Dewi_Shri_Farmindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AXIO.JK",
+    "nama_perusahaan": "Tera_Data_Indonusa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KRYA.JK",
+    "nama_perusahaan": "Bangun_Karya_Perkasa_Jaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HATM.JK",
+    "nama_perusahaan": "Habco_Trans_Maritima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RCCC.JK",
+    "nama_perusahaan": "Utama_Radar_Cahaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GULA.JK",
+    "nama_perusahaan": "Aman_Agrindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JARR.JK",
+    "nama_perusahaan": "Jhonlin_Agro_Raya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMMS.JK",
+    "nama_perusahaan": "Agung_Menjangan_Mas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RAFI.JK",
+    "nama_perusahaan": "Sari_Kreasi_Boga_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KKES.JK",
+    "nama_perusahaan": "Kusuma_Kemindo_Sentosa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ELPI.JK",
+    "nama_perusahaan": "Pelayaran_Nasional_Ekalya_Purn",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "EURO.JK",
+    "nama_perusahaan": "Estee_Gold_Feet_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KLIN.JK",
+    "nama_perusahaan": "Klinko_Karya_Imaji_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TOOL.JK",
+    "nama_perusahaan": "Rohartindo_Nusantara_Luas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BUAH.JK",
+    "nama_perusahaan": "Segar_Kumala_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CRAB.JK",
+    "nama_perusahaan": "Toba_Surimi_Industries_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MEDS.JK",
+    "nama_perusahaan": "Hetzer_Medical_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "COAL.JK",
+    "nama_perusahaan": "Black_Diamond_Resources_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PRAY.JK",
+    "nama_perusahaan": "Famon_Awal_Bros_Sedaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CBUT.JK",
+    "nama_perusahaan": "Citra_Borneo_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BELI.JK",
+    "nama_perusahaan": "Global_Digital_Niaga_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MKTR.JK",
+    "nama_perusahaan": "Menthobi_Karyatama_Raya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OMED.JK",
+    "nama_perusahaan": "Jayamas_Medica_Industri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BSBK.JK",
+    "nama_perusahaan": "Wulandari_Bangun_Laksana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PDPP.JK",
+    "nama_perusahaan": "Primadaya_Plastisindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KDTN.JK",
+    "nama_perusahaan": "Puri_Sentul_Permai_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ZATA.JK",
+    "nama_perusahaan": "Bersama_Zatta_Jaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NINE.JK",
+    "nama_perusahaan": "Techno9_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MMIX.JK",
+    "nama_perusahaan": "Multi_Medika_Internasional_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PADA.JK",
+    "nama_perusahaan": "Personel_Alih_Daya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ISAP.JK",
+    "nama_perusahaan": "Isra_Presisi_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VTNY.JK",
+    "nama_perusahaan": "Venteny_Fortuna_International_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SOUL.JK",
+    "nama_perusahaan": "Mitra_Tirta_Buwana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ELIT.JK",
+    "nama_perusahaan": "Data_Sinergitama_Jaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BEER.JK",
+    "nama_perusahaan": "Jobubu_Jarum_Minahasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CBPE.JK",
+    "nama_perusahaan": "Citra_Buana_Prasida_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SUNI.JK",
+    "nama_perusahaan": "Sunindo_Pratama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CBRE.JK",
+    "nama_perusahaan": "Cakra_Buana_Resources_Energi_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WINE.JK",
+    "nama_perusahaan": "Hatten_Bali_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BMBL.JK",
+    "nama_perusahaan": "Lavender_Bina_Cendikia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PEVE.JK",
+    "nama_perusahaan": "Penta_Valent_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LAJU.JK",
+    "nama_perusahaan": "Jasa_Berdikari_Logistics_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FWCT.JK",
+    "nama_perusahaan": "Wijaya_Cahaya_Timber_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NAYZ.JK",
+    "nama_perusahaan": "Hassana_Boga_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IRSX.JK",
+    "nama_perusahaan": "Aviana_Sinar_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PACK.JK",
+    "nama_perusahaan": "Abadi_Nusantara_Hijau_Investam",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VAST.JK",
+    "nama_perusahaan": "Vastland_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CHIP.JK",
+    "nama_perusahaan": "Pelita_Teknologi_Global_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HALO.JK",
+    "nama_perusahaan": "Haloni_Jane_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KING.JK",
+    "nama_perusahaan": "Hoffmen_Cleanindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PGEO.JK",
+    "nama_perusahaan": "Pertamina_Geothermal_Energy_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FUTR.JK",
+    "nama_perusahaan": "Lini_Imaji_Kreasi_Ekosistem_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HILL.JK",
+    "nama_perusahaan": "Hillcon_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BDKR.JK",
+    "nama_perusahaan": "Berdikari_Pondasi_Perkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTMP.JK",
+    "nama_perusahaan": "Mitra_Pack_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SAGE.JK",
+    "nama_perusahaan": "Saptausaha_Gemilangindah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TRON.JK",
+    "nama_perusahaan": "Teknologi_Karya_Digital_Nusa_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CUAN.JK",
+    "nama_perusahaan": "Petrindo_Jaya_Kreasi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NSSS.JK",
+    "nama_perusahaan": "Nusantara_Sawit_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GTRA.JK",
+    "nama_perusahaan": "Grahaprima_Suksesmandiri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HAJJ.JK",
+    "nama_perusahaan": "Arsy_Buana_Travelindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PIPA.JK",
+    "nama_perusahaan": "Multi_Makmur_Lemindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NCKL.JK",
+    "nama_perusahaan": "Trimegah_Bangun_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MENN.JK",
+    "nama_perusahaan": "Menn_Teknologi_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AWAN.JK",
+    "nama_perusahaan": "Era_Digital_Media_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MBMA.JK",
+    "nama_perusahaan": "Merdeka_Battery_Materials_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RAAM.JK",
+    "nama_perusahaan": "Tripar_Multivision_Plus_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DOOH.JK",
+    "nama_perusahaan": "Era_Media_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "JATI.JK",
+    "nama_perusahaan": "Informasi_Teknologi_Indonesia_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TYRE.JK",
+    "nama_perusahaan": "King_Tire_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MPXL.JK",
+    "nama_perusahaan": "MPX_Logistics_International_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMIL.JK",
+    "nama_perusahaan": "Sarana_Mitra_Luas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KLAS.JK",
+    "nama_perusahaan": "Pelayaran_Kurnia_Lautan_Semest",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAXI.JK",
+    "nama_perusahaan": "Maxindo_Karya_Anugerah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VKTR.JK",
+    "nama_perusahaan": "VKTR_Teknologi_Mobilitas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RELF.JK",
+    "nama_perusahaan": "Graha_Mitra_Asia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMMN.JK",
+    "nama_perusahaan": "Amman_Mineral_Internasional_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CRSN.JK",
+    "nama_perusahaan": "Carsurin_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GRPM.JK",
+    "nama_perusahaan": "Graha_Prima_Mentari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "WIDI.JK",
+    "nama_perusahaan": "Widiant_Jaya_Krenindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TGUK.JK",
+    "nama_perusahaan": "Platinum_Wahab_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "INET.JK",
+    "nama_perusahaan": "Sinergi_Inti_Andalan_Prima_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MAHA.JK",
+    "nama_perusahaan": "Mandiri_Herindo_Adiperkasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RMKO.JK",
+    "nama_perusahaan": "Royaltama_Mulia_Kontraktorindo",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CNMA.JK",
+    "nama_perusahaan": "Nusantara_Sejahtera_Raya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "FOLK.JK",
+    "nama_perusahaan": "Multi_Garam_Utama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HBAT.JK",
+    "nama_perusahaan": "Minahasa_Membangun_Hebat_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GRIA.JK",
+    "nama_perusahaan": "Ingria_Pratama_Capitalindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PPRI.JK",
+    "nama_perusahaan": "Paperocks_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ERAL.JK",
+    "nama_perusahaan": "Sinar_Eka_Selaras_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CYBR.JK",
+    "nama_perusahaan": "ITSEC_Asia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MUTU.JK",
+    "nama_perusahaan": "Mutuagung_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LMAX.JK",
+    "nama_perusahaan": "Lupromax_Pelumas_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HUMI.JK",
+    "nama_perusahaan": "Humpuss_Maritim_Internasional_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MSIE.JK",
+    "nama_perusahaan": "Multisarana_Intan_Eduka_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RSCH.JK",
+    "nama_perusahaan": "Charlie_Hospital_Semarang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BABY.JK",
+    "nama_perusahaan": "Multitrend_Indo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AEGS.JK",
+    "nama_perusahaan": "Anugerah_Spareparts_Sejahtera_",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IOTF.JK",
+    "nama_perusahaan": "Sumber_Sinergi_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KOCI.JK",
+    "nama_perusahaan": "Kokoh_Exa_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTPS.JK",
+    "nama_perusahaan": "Pulau_Subur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BREN.JK",
+    "nama_perusahaan": "Barito_Renewables_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "STRK.JK",
+    "nama_perusahaan": "Lovina_Beach_Brewery_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KOKA.JK",
+    "nama_perusahaan": "Koka_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LOPI.JK",
+    "nama_perusahaan": "Logisticsplus_International_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UDNG.JK",
+    "nama_perusahaan": "Agro_Bahari_Nusantara_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RGAS.JK",
+    "nama_perusahaan": "Kian_Santang_Muliatama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MSTI.JK",
+    "nama_perusahaan": "Mastersystem_Infotama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "IKPM.JK",
+    "nama_perusahaan": "Ikapharmindo_Putramas_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AYAM.JK",
+    "nama_perusahaan": "Janu_Putra_Sejahtera_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SURI.JK",
+    "nama_perusahaan": "Maja_Agung_Latexindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ASLI.JK",
+    "nama_perusahaan": "Asri_Karya_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CGAS.JK",
+    "nama_perusahaan": "Citra_Nusantara_Gemilang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NICE.JK",
+    "nama_perusahaan": "Adhi_Kartiko_Pratama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MSJA.JK",
+    "nama_perusahaan": "Multi_Spunindo_Jaya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMLE.JK",
+    "nama_perusahaan": "Sinergi_Multi_Lestarindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ACRO.JK",
+    "nama_perusahaan": "Samcro_Hyosung_Adilestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MANG.JK",
+    "nama_perusahaan": "Manggung_Polahraya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GRPH.JK",
+    "nama_perusahaan": "Griptha_Putra_Persada_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SMGA.JK",
+    "nama_perusahaan": "Sumber_Mineral_Global_Abadi_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "UNTD.JK",
+    "nama_perusahaan": "Terang_Dunia_Internusa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "TOSK.JK",
+    "nama_perusahaan": "Topindo_Solusi_Komunika_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MPIX.JK",
+    "nama_perusahaan": "Mitra_Pedagang_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ALII.JK",
+    "nama_perusahaan": "Ancara_Logistics_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MKAP.JK",
+    "nama_perusahaan": "Multikarya_Asia_Pasifik_Raya_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MEJA.JK",
+    "nama_perusahaan": "Harta_Djaya_Karya_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LIVE.JK",
+    "nama_perusahaan": "Homeco_Victoria_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HYGN.JK",
+    "nama_perusahaan": "Ecocare_Indo_Pasifik_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BAIK.JK",
+    "nama_perusahaan": "Bersama_Mencapai_Puncak_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VISI.JK",
+    "nama_perusahaan": "Satu_Visi_Putra_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AREA.JK",
+    "nama_perusahaan": "Dunia_Virtual_Online_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MHKI.JK",
+    "nama_perusahaan": "Multi_Hanna_Kreasindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ATLA.JK",
+    "nama_perusahaan": "Atlantis_Subsea_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DATA.JK",
+    "nama_perusahaan": "Remala_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SOLA.JK",
+    "nama_perusahaan": "Xolare_RCR_Energy_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BATR.JK",
+    "nama_perusahaan": "Benteng_Api_Technic_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SPRE.JK",
+    "nama_perusahaan": "Soraya_Berjaya_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PART.JK",
+    "nama_perusahaan": "Cipta_Perdana_Lancar_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GOLF.JK",
+    "nama_perusahaan": "Intra_Golflink_Resorts_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "ISEA.JK",
+    "nama_perusahaan": "Indo_American_Seafoods_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BLES.JK",
+    "nama_perusahaan": "Superior_Prima_Sukses_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "GUNA.JK",
+    "nama_perusahaan": "Gunanusa_Eramandiri_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LABS.JK",
+    "nama_perusahaan": "UBC_Medical_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DOSS.JK",
+    "nama_perusahaan": "Global_Sukses_Digital_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NEST.JK",
+    "nama_perusahaan": "Esta_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "PTMR.JK",
+    "nama_perusahaan": "Master_Print_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "VERN.JK",
+    "nama_perusahaan": "Verona_Indah_Pictures_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DAAZ.JK",
+    "nama_perusahaan": "Daaz_Bara_Lestari_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BOAT.JK",
+    "nama_perusahaan": "Newport_Marine_Services_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "NAIK.JK",
+    "nama_perusahaan": "Adiwarna_Anugerah_Abadi_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AADI.JK",
+    "nama_perusahaan": "Adaro_Andalan_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "MDIY.JK",
+    "nama_perusahaan": "Daya_Intiguna_Yasa_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KSIX.JK",
+    "nama_perusahaan": "Kentanix_Supra_International_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RATU.JK",
+    "nama_perusahaan": "Raharja_Energi_Cepu_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "YOII.JK",
+    "nama_perusahaan": "Asuransi_Digital_Bersama_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "HGII.JK",
+    "nama_perusahaan": "Hero_Global_Investment_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "BRRC.JK",
+    "nama_perusahaan": "Raja_Roti_Cemerlang_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DGWG.JK",
+    "nama_perusahaan": "Delta_Giri_Wacana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CBDK.JK",
+    "nama_perusahaan": "Bangun_Kosambi_Sukses_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "OBAT.JK",
+    "nama_perusahaan": "Brigit_Biofarmaka_Teknologi_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SOSS.JK",
+    "nama_perusahaan": "Shield_On_Service_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DEAL.JK",
+    "nama_perusahaan": "Dewata_Freightinternational_Tb",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "POLA.JK",
+    "nama_perusahaan": "Pool_Advista_Finance_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "DIVA.JK",
+    "nama_perusahaan": "Distribusi_Voucher_Nusantara_T",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "LUCK.JK",
+    "nama_perusahaan": "Sentral_Mitra_Informatika_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "URBN.JK",
+    "nama_perusahaan": "Urban_Jakarta_Propertindo_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SOTS.JK",
+    "nama_perusahaan": "Satria_Mega_Kencana_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "AMAN.JK",
+    "nama_perusahaan": "Makmur_Berkah_Amanda_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CARE.JK",
+    "nama_perusahaan": "Metro_Healthcare_Indonesia_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SAMF.JK",
+    "nama_perusahaan": "Saraswanti_Anugerah_Makmur_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "SBAT.JK",
+    "nama_perusahaan": "Sejahtera_Bintang_Abadi_Textil",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "KBAG.JK",
+    "nama_perusahaan": "Karya_Bersama_Anugerah_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "CBMF.JK",
+    "nama_perusahaan": "Cahaya_Bintang_Medan_Tbk",
+    "reason": "NO_DATA"
+  },
+  {
+    "kode_saham": "RONY.JK",
+    "nama_perusahaan": "Aesler_Grup_Internasional_Tbk",
+    "reason": "NO_DATA"
+  }
+]
