@@ -373,9 +373,7 @@ def process_financial_data(df_raw, source_collection_name_str):
 
         # PERBAIKAN 12: Mapping tag yang lebih comprehensive
         financial_tags_map = {
-            "company_name": "EntityRegistrantName", 
-            "sector": "IndustrySector", 
-            "subsector": "Subsector",
+            "sector": "Subsector",
             "revenue": "RevenueFromContractsWithCustomers", 
             "cost_of_revenue": "CostOfGoodsSoldAndServices",
             "gross_profit": "GrossProfit", 
@@ -403,9 +401,7 @@ def process_financial_data(df_raw, source_collection_name_str):
             col("period"),
             
             # String fields
-            safe_get_key_udf(col("parsed_data"), lit(financial_tags_map["company_name"])).alias("company_name"),
             safe_get_key_udf(col("parsed_data"), lit(financial_tags_map["sector"])).alias("sector"),
-            safe_get_key_udf(col("parsed_data"), lit(financial_tags_map["subsector"])).alias("subsector"),
             
             # Numeric fields dengan proper casting dan null handling
             coalesce(
@@ -450,12 +446,6 @@ def process_financial_data(df_raw, source_collection_name_str):
         # PERBAIKAN 14: Hitung metrik tambahan dengan safe division
         logger.info("Menghitung metrik finansial...")
         df_processed = df_processed.withColumn(
-            "net_profit_margin_pct",
-            when(
-                (col("revenue").isNotNull()) & (col("revenue") != 0), 
-                (col("net_profit_loss") / col("revenue")) * 100
-            ).otherwise(None)
-        ).withColumn(
             "debt_to_equity_ratio",
             when(
                 (col("total_equity").isNotNull()) & (col("total_equity") != 0), 
@@ -482,7 +472,7 @@ def process_financial_data(df_raw, source_collection_name_str):
         
         if final_count > 0:
             logger.info("Sample hasil processing:")
-            df_processed.select("company_name", "revenue", "net_profit_loss").show(5, truncate=False)
+            df_processed.select("sector", "revenue", "net_profit_loss").show(5, truncate=False)
 
         logger.info(f"✅ Data berhasil diproses untuk {source_collection_name_str}")
         return df_processed

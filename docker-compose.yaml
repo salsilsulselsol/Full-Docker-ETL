@@ -1,13 +1,15 @@
+version: '3.8'
+
 services:
   # PostgreSQL untuk metadata Airflow
   postgres:
     image: postgres:13
+    platform: linux/amd64
     container_name: postgres-airflow
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
-      # Performance tuning
       POSTGRES_SHARED_PRELOAD_LIBRARIES: pg_stat_statements
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
@@ -20,13 +22,14 @@ services:
     restart: always
     networks:
       - airflow-network
-    # Resource limits untuk stability
     deploy:
       resources:
         limits:
           memory: 512M
         reservations:
           memory: 256M
+
+
 
   # Redis sebagai message broker Celery Airflow
   redis:
@@ -41,8 +44,54 @@ services:
     restart: always
     networks:
       - airflow-network
-    # Redis configuration untuk stability
     command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru
+
+  # Laravel Application
+  laravel-app:
+    build:
+      context: ./laravel
+      dockerfile: Dockerfile
+    container_name: laravel-app
+    restart: always
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+    environment:
+      APP_NAME: Laravel
+      APP_ENV: production
+      APP_KEY: base64:your-app-key-here
+      APP_DEBUG: false
+      APP_URL: http://localhost:8000
+      
+      # Database menggunakan file-based (SQLite) untuk session/cache saja
+      DB_CONNECTION: sqlite
+      DB_DATABASE: /var/www/html/database/database.sqlite
+      
+      CACHE_DRIVER: redis
+      QUEUE_CONNECTION: redis
+      SESSION_DRIVER: redis
+      
+      REDIS_HOST: redis
+      REDIS_PASSWORD: null
+      REDIS_PORT: 6379
+      
+      # MongoDB untuk data utama
+      MONGO_URI: mongodb://mongodb-external:27017/
+      MONGO_DATABASE: laravel_app
+    volumes:
+      - ./laravel:/var/www/html
+      - ./laravel/storage:/var/www/html/storage
+    ports:
+      - "8000:80"
+    networks:
+      - airflow-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   # Airflow Webserver
   airflow-webserver:
@@ -67,18 +116,16 @@ services:
       AIRFLOW__WEBSERVER__SECRET_KEY: 'f3b1a2c5d8e7f94b6c3a9d1e7f8b0c3d'
       AIRFLOW__CORE__FERNET_KEY: 'z3BMGxVHz2tJq64TyW5guXw_T3OgMFTdQ9v_3XnZiwE='
       AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
-      # Rate limiting menggunakan Redis
       AIRFLOW__WEBSERVER__RATE_LIMITER_STORAGE_URI: "redis://redis:6379/1"
-      # Database connection pool settings
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 3600
       AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+      MONGO_URI: mongodb://mongodb-external:27017/ 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
       - ./airflow/plugins:/opt/airflow/plugins
       - ./airflow/data:/opt/airflow/data
-      - ./models:/opt/airflow/models
     ports:
       - "8080:8080"
     networks:
@@ -115,19 +162,17 @@ services:
       AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
       AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
-      # Scheduler performance tuning
       AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: 300
       AIRFLOW__SCHEDULER__CATCHUP_BY_DEFAULT: 'False'
-      # Database connection pool settings
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 3600
       AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+      MONGO_URI: mongodb://mongodb-external:27017/
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
       - ./airflow/plugins:/opt/airflow/plugins
       - ./airflow/data:/opt/airflow/data
-      - ./models:/opt/airflow/models
     networks:
       - airflow-network
     dns:
@@ -157,14 +202,13 @@ services:
       AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
       AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
-      # Worker timeout settings untuk long-running tasks
       AIRFLOW__CELERY__WORKER_CONCURRENCY: 2
-      AIRFLOW__CELERY__TASK_SOFT_TIME_LIMIT: 7200  # 2 hours
-      AIRFLOW__CELERY__TASK_TIME_LIMIT: 7800      # 2.16 hours
-      # Database connection pool settings
+      AIRFLOW__CELERY__TASK_SOFT_TIME_LIMIT: 7200
+      AIRFLOW__CELERY__TASK_TIME_LIMIT: 7800
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 3600
       AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+      MONGO_URI: mongodb://mongodb-external:27017/
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
@@ -172,7 +216,6 @@ services:
       - ./airflow/data:/opt/airflow/data
     networks:
       - airflow-network
-    # Resource limits untuk stability
     deploy:
       resources:
         limits:
@@ -232,7 +275,6 @@ services:
       - mongo-data:/data/db
     networks:
       - airflow-network
-    # MongoDB performance tuning
     command: mongod --wiredTigerCacheSizeGB 0.5
 
   # API Flask server
@@ -255,7 +297,4 @@ volumes:
 
 networks:
   airflow-network:
-    driver: bridge
- 
-  etl-app-network:    # Definisi Jaringan Utama yang disatukan
     driver: bridge
