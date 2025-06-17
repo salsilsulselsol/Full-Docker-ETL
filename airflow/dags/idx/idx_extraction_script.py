@@ -32,7 +32,7 @@ BASE_DOWNLOAD_DIR = "/opt/airflow/data"
 IDX_URL = "https://idx.co.id/id/perusahaan-tercatat/laporan-keuangan-dan-tahunan/"
 DB_NAME = "idx_financial_data_staging"
 COLLECTION_NAME_PREFIX = "reports"
-DEFAULT_PERIODS = "tw1,tw2,tw3,audit" # **PENTING: Pastikan ini sudah terdefinisi di sini!**
+DEFAULT_PERIODS = "tw1,tw2" # **PENTING: Pastikan ini sudah terdefinisi di sini!**
 
 # === UTILITY FUNCTIONS ===
 
