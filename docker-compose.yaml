@@ -1,13 +1,15 @@
+version: '3.8'
+
 services:
   # PostgreSQL untuk metadata Airflow
   postgres:
     image: postgres:13
+    platform: linux/amd64
     container_name: postgres-airflow
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
-      # Performance tuning
       POSTGRES_SHARED_PRELOAD_LIBRARIES: pg_stat_statements
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
@@ -20,7 +22,6 @@ services:
     restart: always
     networks:
       - airflow-network
-    # Resource limits untuk stability
     deploy:
       resources:
         limits:
@@ -41,7 +42,6 @@ services:
     restart: always
     networks:
       - airflow-network
-    # Redis configuration untuk stability
     command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru
 
   # Airflow Webserver
@@ -57,7 +57,7 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-      mongodb:
+      mongodb: # Pastikan nama service sesuai dengan nama service MongoDB Anda
         condition: service_healthy
     environment:
       AIRFLOW__CORE__EXECUTOR: CeleryExecutor
@@ -67,12 +67,11 @@ services:
       AIRFLOW__WEBSERVER__SECRET_KEY: 'f3b1a2c5d8e7f94b6c3a9d1e7f8b0c3d'
       AIRFLOW__CORE__FERNET_KEY: 'z3BMGxVHz2tJq64TyW5guXw_T3OgMFTdQ9v_3XnZiwE='
       AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
-      # Rate limiting menggunakan Redis
       AIRFLOW__WEBSERVER__RATE_LIMITER_STORAGE_URI: "redis://redis:6379/1"
-      # Database connection pool settings
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 3600
       AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+      MONGO_URI: mongodb://mongodb-external:27017/ # <-- TAMBAHAN KRITIS
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
@@ -106,7 +105,7 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-      mongodb:
+      mongodb: # Pastikan nama service sesuai dengan nama service MongoDB Anda
         condition: service_healthy
     environment:
       AIRFLOW__CORE__EXECUTOR: CeleryExecutor
@@ -114,13 +113,12 @@ services:
       AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
       AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
-      # Scheduler performance tuning
       AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: 300
       AIRFLOW__SCHEDULER__CATCHUP_BY_DEFAULT: 'False'
-      # Database connection pool settings
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 3600
       AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+      MONGO_URI: mongodb://mongodb-external:27017/ # <-- TAMBAHAN KRITIS
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
@@ -147,7 +145,7 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-      mongodb:
+      mongodb: # Pastikan nama service sesuai dengan nama service MongoDB Anda
         condition: service_healthy
     environment:
       AIRFLOW__CORE__EXECUTOR: CeleryExecutor
@@ -155,14 +153,13 @@ services:
       AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
       AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
-      # Worker timeout settings untuk long-running tasks
       AIRFLOW__CELERY__WORKER_CONCURRENCY: 2
-      AIRFLOW__CELERY__TASK_SOFT_TIME_LIMIT: 7200  # 2 hours
-      AIRFLOW__CELERY__TASK_TIME_LIMIT: 7800      # 2.16 hours
-      # Database connection pool settings
+      AIRFLOW__CELERY__TASK_SOFT_TIME_LIMIT: 7200
+      AIRFLOW__CELERY__TASK_TIME_LIMIT: 7800
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
       AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 3600
       AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+      MONGO_URI: mongodb://mongodb-external:27017/ # <-- TAMBAHAN KRITIS
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
@@ -170,7 +167,6 @@ services:
       - ./airflow/data:/opt/airflow/data
     networks:
       - airflow-network
-    # Resource limits untuk stability
     deploy:
       resources:
         limits:
@@ -230,7 +226,6 @@ services:
       - mongo-data:/data/db
     networks:
       - airflow-network
-    # MongoDB performance tuning
     command: mongod --wiredTigerCacheSizeGB 0.5
 
   # API Flask server
@@ -254,6 +249,4 @@ volumes:
 networks:
   airflow-network:
     driver: bridge
- 
-  etl-app-network:    # Definisi Jaringan Utama yang disatukan
-    driver: bridge
+  

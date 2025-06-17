@@ -8,11 +8,10 @@ import os
 import time
 import io
 import pandas as pd
-# import requests # Tidak lagi digunakan untuk unduhan langsung, bisa dihapus atau dikomentari
 import zipfile
 import random
-import xml.etree.ElementTree as ET
-import json
+# import xml.etree.ElementTree as ET # No longer needed for direct XML to JSON flattening
+# import json # No longer directly converting to JSON here
 import logging
 import shutil 
 
@@ -33,7 +32,7 @@ BASE_DOWNLOAD_DIR = "/opt/airflow/data"
 IDX_URL = "https://idx.co.id/id/perusahaan-tercatat/laporan-keuangan-dan-tahunan/"
 DB_NAME = "idx_financial_data_staging"
 COLLECTION_NAME_PREFIX = "reports"
-DEFAULT_PERIODS = "tw1,tw2,tw3,audit" # **PENTING: Pastikan ini sudah terdefinisi di sini!**
+DEFAULT_PERIODS = "tw1,tw2" # **PENTING: Pastikan ini sudah terdefinisi di sini!**
 
 # === UTILITY FUNCTIONS ===
 
@@ -98,7 +97,7 @@ def init_driver(year_download_dir):
     options.set_preference("browser.download.dir", year_download_dir)
     options.set_preference("browser.download.useDownloadDir", True)
     options.set_preference("browser.helperApps.neverAsk.saveToDisk",
-                           "application/zip,application/octet-stream,application/x-zip-compressed,multipart/x-zip")
+                            "application/zip,application/octet-stream,application/x-zip-compressed,multipart/x-zip")
     options.set_preference("browser.download.manager.showWhenStarting", False) 
     options.set_preference("pdfjs.disabled", True) 
 
@@ -214,10 +213,7 @@ def download_file_via_selenium_click(driver, link_element, company_code, year_do
             # Ubah nama file 'instance.zip' menjadi '<company_code>_instance.zip'
             if os.path.exists(original_filepath):
                 os.rename(original_filepath, renamed_filepath)
-                # --- PERBAIKAN F-STRING DI SINI ---
-                # Menggunakan single quotes (') untuk f-string bagian dalam
-                logger.info(f"✅ Renamed '{original_filename}' to '{f'{company_code}_instance.zip'}' for {company_code}.")
-                # --- AKHIR PERBAIKAN F-STRING ---
+                logger.info(f"✅ Renamed '{original_filename}' to '{company_code}_instance.zip' for {company_code}.")
                 return renamed_filepath
             else:
                 logger.error(f"❌ '{original_filename}' not found after successful download detection for {company_code}. Renaming failed.")
@@ -236,122 +232,103 @@ def download_file_via_selenium_click(driver, link_element, company_code, year_do
         return None
 
 def extract_and_cleanup_zip(zip_filepath, company_code, year_download_dir):
-    """Ekstrak ZIP file kemudian hapus ZIP file."""
+    """
+    Ekstrak ZIP file, baca konten XML/XBRL utama, lalu hapus ZIP file.
+    Akan mengembalikan konten XML mentah (dalam bytes).
+    """
     company_dir = os.path.join(year_download_dir, company_code)
+    xml_content_bytes = None # Initialize to None
+
     try:
         logger.info(f"📂 Extracting ZIP for {company_code} from {zip_filepath}...")
         
         os.makedirs(company_dir, exist_ok=True)
         
         with zipfile.ZipFile(zip_filepath, 'r') as zip_ref:
+            # Iterate through the files in the zip
             for member in zip_ref.namelist():
                 member_path = os.path.join(company_dir, member)
+                # Security check to prevent path traversal
                 if not os.path.abspath(member_path).startswith(os.path.abspath(company_dir) + os.sep):
                     raise zipfile.BadZipFile("Attempted Path Traversal in Zip File during extraction.")
                 zip_ref.extract(member, company_dir)
         
         logger.info(f"✅ ZIP extracted to: {company_dir}")
         
-        os.remove(zip_filepath)
-        logger.info(f"🗑️ ZIP file deleted: {zip_filepath}")
-        
-        xml_content = None
-        found_files = []
-        for root, dirs, files in os.walk(company_dir):
+        # Now, find the main XML/XBRL file (e.g., instance.xml or the largest .xml/.xbrl)
+        found_xml_files = []
+        for root, _, files in os.walk(company_dir):
             for file in files:
                 if file.lower().endswith(('.xml', '.xbrl')):
                     file_path = os.path.join(root, file)
-                    found_files.append(file_path)
-                    if 'instance' in file.lower():
-                        with open(file_path, 'rb') as f:
-                            xml_content = f.read()
-                        logger.info(f"📄 Found primary instance file: {file_path}")
-                        break
-            if xml_content:
-                break
+                    found_xml_files.append(file_path)
         
-        if not xml_content and found_files:
-            file_path = found_files[0]
-            with open(file_path, 'rb') as f:
-                xml_content = f.read()
-            logger.info(f"📄 No specific instance file, loaded first XML/XBRL found: {file_path}")
-            
-        if not xml_content:
-            logger.warning(f"No XML/XBRL content found after extracting for {company_code}")
+        if not found_xml_files:
+            logger.warning(f"No XML/XBRL files found after extracting for {company_code}")
+        else:
+            # Prioritize 'instance' file, otherwise take the first found XML/XBRL
+            main_xml_file = None
+            for f_path in found_xml_files:
+                if 'instance' in os.path.basename(f_path).lower():
+                    main_xml_file = f_path
+                    break
+            if not main_xml_file:
+                main_xml_file = found_xml_files[0] # Fallback to first found
 
-        return xml_content
+            with open(main_xml_file, 'rb') as f:
+                xml_content_bytes = f.read()
+            logger.info(f"📄 Read main XML/XBRL content from: {main_xml_file}")
+            
+        # Delete the ZIP file after extraction
+        os.remove(zip_filepath)
+        logger.info(f"🗑️ ZIP file deleted: {zip_filepath}")
         
+        # NOTE: We are NOT deleting the extracted 'company_dir' here.
+        # This is where the raw XML files will remain on disk.
+        # If you want to clean them up after saving to MongoDB,
+        # that logic would go in `scrape_financial_data` after `save_to_mongodb`.
+        
+        return xml_content_bytes # Return raw bytes, not JSON
+
     except zipfile.BadZipFile as e:
         logger.error(f"❌ Corrupted or invalid ZIP file for {company_code}: {e}")
         if os.path.exists(company_dir):
-            shutil.rmtree(company_dir)
+            shutil.rmtree(company_dir) # Clean up partial extraction if zip is bad
         return None
     except Exception as e:
         logger.error(f"❌ Failed to extract ZIP for {company_code}: {e}", exc_info=True)
+        if os.path.exists(company_dir):
+            shutil.rmtree(company_dir) # Clean up if other errors occur during extraction
         return None
 
 # === DATA PROCESSING FUNCTIONS ===
 
-def xml_to_json_flat(xml_content_bytes):
-    """Konversi XML ke JSON flat structure."""
-    def remove_namespace(tag):
-        return tag.split('}')[-1] if '}' in tag else tag
-
-    try:
-        logger.info("🔄 Converting XML to flattened JSON...")
-        
-        if isinstance(xml_content_bytes, bytes):
-            try:
-                xml_content_str = xml_content_bytes.decode('utf-8')
-            except UnicodeDecodeError:
-                xml_content_str = xml_content_bytes.decode('latin-1', errors='replace')
-        else:
-            xml_content_str = xml_content_bytes
-
-        root = ET.fromstring(xml_content_str)
-        json_data = {}
-        
-        for elem in root.iter():
-            tag_name = remove_namespace(elem.tag)
-            if elem.text and elem.text.strip():
-                json_data[tag_name] = elem.text.strip()
-            for attr_name, attr_value in elem.attrib.items():
-                json_data[f"{tag_name}_@{remove_namespace(attr_name)}"] = attr_value
-
-        if not json_data:
-            logger.warning("JSON data is empty after XML conversion. This might indicate an issue with the XML structure or content.")
-            
-        logger.info("✅ XML successfully converted to JSON.")
-        return json_data
-        
-    except ET.ParseError as e:
-        logger.error(f"❌ Failed to parse XML: {e}. Content might be malformed or invalid XML.", exc_info=True)
-        return None
-    except Exception as e:
-        logger.error(f"❌ An unexpected error occurred during XML to JSON conversion: {e}", exc_info=True)
-        return None
+# Removed: def xml_to_json_flat(xml_content_bytes):
+# Removed because you don't want XML to JSON conversion in this script.
 
 def save_to_mongodb(data_to_save, company_code, year_str, period_str, mongo_uri):
-    """Simpan data ke MongoDB."""
+    """
+    Simpan data mentah (XML bytes/string) ke MongoDB.
+    """
     if data_to_save is None:
         logger.warning(f"No data provided to save for: {company_code} - {year_str} {period_str}")
         return
 
-    data_to_save_processed = data_to_save
+    # Ensure data is in a string format suitable for BSON if it's bytes
+    data_to_save_for_mongo = data_to_save
     if isinstance(data_to_save, bytes): 
         try:
-            data_to_save_processed = data_to_save.decode('utf-8')
+            data_to_save_for_mongo = data_to_save.decode('utf-8')
         except UnicodeDecodeError:
-            data_to_save_processed = data_to_save.decode('latin-1', errors='replace')
-    elif isinstance(data_to_save, dict): 
-        pass
-    else: 
-        data_to_save_processed = str(data_to_save)
+            # Fallback for problematic encodings, replacing invalid characters
+            data_to_save_for_mongo = data_to_save.decode('latin-1', errors='replace')
+    elif not isinstance(data_to_save, str): # Ensure it's a string if not bytes
+        data_to_save_for_mongo = str(data_to_save)
 
     client = None
     try:
         collection_name = f"{COLLECTION_NAME_PREFIX}_{year_str}_{period_str}"
-        logger.info(f"💾 Saving data for {company_code} to collection '{collection_name}'...")
+        logger.info(f"💾 Saving raw XML data for {company_code} to collection '{collection_name}'...")
         
         client = MongoClient(mongo_uri, serverSelectionTimeoutMS=10000) 
         client.admin.command('ping') 
@@ -364,8 +341,8 @@ def save_to_mongodb(data_to_save, company_code, year_str, period_str, mongo_uri)
             "period": period_str,
             "retrieved_at": pd.Timestamp.now(tz='UTC'), 
             "financial_data_source": "IDX_Instance_XBRL",
-            "raw_data_type": "XML_Flat_JSON" if isinstance(data_to_save_processed, dict) else "Raw_XML_String",
-            "data": data_to_save_processed 
+            "raw_data_type": "Raw_XML_String", # Changed to reflect raw XML string storage
+            "data": data_to_save_for_mongo 
         }
         
         collection.update_one(
@@ -374,7 +351,7 @@ def save_to_mongodb(data_to_save, company_code, year_str, period_str, mongo_uri)
             upsert=True 
         )
         
-        logger.info(f"✅ Data successfully saved/updated for {company_code}.")
+        logger.info(f"✅ Raw XML data successfully saved/updated for {company_code}.")
         
     except ConnectionFailure as e:
         logger.error(f"❌ MongoDB connection failed for {company_code}: {e}. Check MONGO_URI and network access.")
@@ -438,7 +415,7 @@ def scrape_financial_data(driver, mongo_uri, year_to_scrape, periods_to_scrape_s
                 continue
                 
             period_mapping = { 
-                'tw1': ['tw1', 'triwulan1', 'q1', '1'], 'tw2': ['tw2', 'triwulan2', 'q2', '2'],  
+                'tw1': ['tw1', 'triwulan1', 'q1', '1'], 'tw2': ['tw2', 'triwulan2', 'q2', '2'], 
                 'tw3': ['tw3', 'triwulan3', 'q3', '3'], 'audit': ['audit', 'tahunan', 'annual', 'yearly', 'full']
             }
             period_values = period_mapping.get(period_val_str, [period_val_str])
@@ -582,16 +559,17 @@ def scrape_financial_data(driver, mongo_uri, year_to_scrape, periods_to_scrape_s
                                     zip_filepath_renamed = download_file_via_selenium_click(driver, link_el, company_code, year_download_dir)
                                     
                                     if zip_filepath_renamed and os.path.exists(zip_filepath_renamed):
-                                        # Simpan path direktori hasil ekstrak untuk pembersihan nanti
                                         extracted_company_dir = os.path.join(year_download_dir, company_code)
-                                        xml_content = extract_and_cleanup_zip(zip_filepath_renamed, company_code, year_download_dir)
+                                        # Now, this returns raw XML bytes!
+                                        xml_content_bytes = extract_and_cleanup_zip(zip_filepath_renamed, company_code, year_download_dir)
                                         
-                                        if xml_content:
-                                            json_data = xml_to_json_flat(xml_content)
-                                            save_to_mongodb(json_data, company_code, year_to_scrape, period_val_str, mongo_uri)
+                                        if xml_content_bytes:
+                                            # Save raw XML content directly to MongoDB
+                                            save_to_mongodb(xml_content_bytes, company_code, year_to_scrape, period_val_str, mongo_uri)
                                             total_processed += 1
                                             
                                             # --- PEMBARUAN: HAPUS FOLDER EMITEN SETELAH BERHASIL DISIMPAN KE MONGO DB ---
+                                            # This logic correctly cleans up the extracted directory after saving to MongoDB
                                             if extracted_company_dir and os.path.exists(extracted_company_dir):
                                                 try:
                                                     shutil.rmtree(extracted_company_dir)
@@ -600,7 +578,7 @@ def scrape_financial_data(driver, mongo_uri, year_to_scrape, periods_to_scrape_s
                                                     logger.warning(f"Failed to remove extracted company directory {extracted_company_dir}: {clean_e}")
                                             # --- AKHIR PEMBARUAN ---
                                         else:
-                                            logger.warning(f"No XML content extracted or converted for {company_code} after download.")
+                                            logger.warning(f"No XML content extracted for {company_code} after download.")
                                     else:
                                         logger.warning(f"ZIP file not found or failed download for {company_code}. Skipping extraction for this company.")
 
@@ -618,7 +596,7 @@ def scrape_financial_data(driver, mongo_uri, year_to_scrape, periods_to_scrape_s
                 # --- DEBUG MODE: Stops after processing the first page ---
                 # Hapus atau komentari 2 baris ini untuk menjalankan seluruh halaman
                 logger.info("💡 DEBUG MODE: Stopping after processing the first page of results.")
-            
+                break # Uncomment this line to stop after the first page
                 # --- END OF DEBUG MODE MODIFICATION ---
                 
                 # Logic untuk navigasi ke halaman berikutnya (akan dilewati jika break di atas aktif)
@@ -627,6 +605,7 @@ def scrape_financial_data(driver, mongo_uri, year_to_scrape, periods_to_scrape_s
                     (By.CSS_SELECTOR, ".pagination-next"), (By.XPATH, "//a[contains(text(), 'Next')]"), 
                     (By.XPATH, "//a[contains(text(), 'Selanjutnya')]"), (By.CSS_SELECTOR, "li.paginate_button.next a"), 
                     (By.CSS_SELECTOR, "[class*='next'] a")
+                    (By)
                 ]
                 next_button = find_element_with_multiple_selectors(driver, next_selectors, timeout=5)
                 
