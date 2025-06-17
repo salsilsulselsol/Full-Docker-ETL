@@ -11,9 +11,7 @@ from bson.objectid import ObjectId
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# --- Peningkatan Performa: Cache Model & Client ---
-# Variabel global untuk menyimpan model dan koneksi agar tidak diinisialisasi berulang kali
-# dalam satu proses worker Airflow.
+# --- Cache Model & Client ---
 _MODELS = None
 _MONGO_CLIENT = None
 
@@ -107,6 +105,16 @@ def transform_and_load_news(**kwargs):
         article_id = article["_id"]
         try:
             content = article.get("konten", "")
+            
+            MAX_INPUT_CHARS = 4000
+            if len(content) > MAX_INPUT_CHARS:
+                logger.warning(
+                    f"Konten untuk artikel {article_id} sangat panjang ({len(content)} chars). "
+                    f"Dipotong menjadi {MAX_INPUT_CHARS} karakter untuk mencegah error."
+                )
+                content = content[:MAX_INPUT_CHARS]
+            
+            
             if not content:
                 raise ValueError("Konten artikel kosong.")
 
@@ -168,7 +176,6 @@ def transform_and_load_news(**kwargs):
                 update_operations = [] # Reset batch
 
     logger.info(f"Pemrosesan selesai! Sukses: {processed_count}, Gagal: {failed_count}")
-
 # Definisi DAG
 default_args = {
     "owner": "airflow",
