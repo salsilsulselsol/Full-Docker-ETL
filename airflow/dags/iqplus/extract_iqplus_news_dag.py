@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.utils.dates import days_ago
 from datetime import datetime, timedelta
 import logging
@@ -15,137 +16,140 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
-# Configure logging
+# Konfigurasi logging untuk mencatat aktivitas scraping
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# --- (Tidak ada perubahan pada semua fungsi Anda dari get_mongo_client hingga extract_news_from_iqplus) ---
 def get_mongo_client():
-    """Get MongoDB client with error handling"""
     try:
-        logger.info("Connecting to MongoDB...")
-        # client = MongoClient("mongodb://host.docker.internal:27017/")
+        logger.info("Menghubungkan ke MongoDB...")
         client = MongoClient("mongodb://mongodb-external:27017/")
-        client.admin.command('ping')  # Test connection
-        logger.info("Successfully connected to MongoDB!")
+        client.admin.command('ping')  # Test koneksi
+        logger.info("Berhasil terhubung ke MongoDB!")
         return client
     except Exception as e:
-        logger.error(f"Failed to connect to MongoDB: {e}")
+        logger.error(f"Gagal terhubung ke MongoDB: {e}")
         raise
 
 def setup_selenium_driver():
-    """Configure and return Selenium WebDriver with robust options"""
     try:
         chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--disable-gpu")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--window-size=1920,1080")
-        chrome_options.add_argument("--disable-extensions")
-        chrome_options.add_argument("--disable-notifications")
-        chrome_options.add_argument("--ignore-certificate-errors")
+        chrome_options.add_argument("--headless")  # Jalankan browser tanpa tampilan GUI
+        chrome_options.add_argument("--disable-gpu")  # Nonaktifkan GPU untuk performa
+        chrome_options.add_argument("--no-sandbox")  # Untuk kompatibilitas container
+        chrome_options.add_argument("--disable-dev-shm-usage")  # Untuk mencegah crash di container
+        chrome_options.add_argument("--window-size=1920,1080")  # Set ukuran window browser
+        chrome_options.add_argument("--disable-extensions")  # Nonaktifkan ekstensi
+        chrome_options.add_argument("--disable-notifications")  # Nonaktifkan notifikasi
+        chrome_options.add_argument("--ignore-certificate-errors")  # Abaikan error sertifikat
         
-        # Set binary location from environment
+        # Set lokasi binary Chrome dari environment variable
         chrome_bin = os.environ.get("CHROME_BIN", "/usr/bin/chromium")
         chrome_options.binary_location = chrome_bin
         
-        # Configure ChromeDriver
+        # Konfigurasi ChromeDriver
         chromedriver_path = os.environ.get("CHROMEDRIVER_PATH", "/usr/local/bin/chromedriver")
         chrome_service = Service(executable_path=chromedriver_path)
         
-        # Initialize WebDriver with retry logic
+        # Inisialisasi WebDriver dengan logic retry
         max_retries = 3
         for attempt in range(max_retries):
             try:
                 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
-                driver.set_page_load_timeout(30)
+                driver.set_page_load_timeout(30)  # Timeout 30 detik untuk loading halaman
                 return driver
             except Exception as e:
                 if attempt == max_retries - 1:
                     raise
-                logger.warning(f"WebDriver initialization failed (attempt {attempt + 1}), retrying...")
+                logger.warning(f"Inisialisasi WebDriver gagal (percobaan {attempt + 1}), mencoba lagi...")
                 time.sleep(5)
     except Exception as e:
-        logger.error(f"Failed to setup Selenium: {e}")
+        logger.error(f"Gagal setup Selenium: {e}")
         raise
 
 def extract_article_content(driver, article_url, base_url):
-    """Extract article content with robust error handling"""
     full_url = base_url + article_url if not article_url.startswith("http") else article_url
     try:
         driver.get(full_url)
+        # Tunggu sampai elemen dengan ID "zoomthis" muncul
         WebDriverWait(driver, 15).until(
             EC.presence_of_element_located((By.ID, "zoomthis"))
         )
         
+        # Parse HTML menggunakan BeautifulSoup
         soup = BeautifulSoup(driver.page_source, "html.parser")
         zoom_div = soup.find("div", id="zoomthis")
         if not zoom_div:
-            logger.warning(f"Content not found in {full_url}")
+            logger.warning(f"Konten tidak ditemukan di {full_url}")
             return None, None
         
-        # Extract date
+        # Ekstrak tanggal artikel
         date_element = zoom_div.find("small")
-        date_text = date_element.text.strip() if date_element else "No date available"
+        date_text = date_element.text.strip() if date_element else "Tanggal tidak tersedia"
         
-        # Remove unwanted elements
+        # Hapus elemen yang tidak diinginkan
         for element in zoom_div.find_all(["small", "h3", "div"]):
             element.extract()
         
-        # Clean content
+        # Bersihkan konten dari spasi berlebih
         content = zoom_div.get_text(separator=" ", strip=True)
         content = re.sub(r'\s+', ' ', content).strip()
         
         return date_text, content
         
     except Exception as e:
-        logger.error(f"Error scraping article {full_url}: {e}")
+        logger.error(f"Error scraping artikel {full_url}: {e}")
         return None, None
 
 def scrape_page(driver, url, base_url, collection):
-    """Scrape a single page of news articles"""
     article_count = 0
     new_article_ids = []
     
     try:
         driver.get(url)
+        # Tunggu sampai elemen dengan ID "load_news" muncul
         WebDriverWait(driver, 15).until(
             EC.presence_of_element_located((By.ID, "load_news"))
         )
-        time.sleep(2)  # Allow dynamic content to load
+        time.sleep(2)  # Beri waktu untuk konten dinamis dimuat
         
+        # Parse HTML untuk mencari daftar berita
         soup = BeautifulSoup(driver.page_source, "html.parser")
         news_list = soup.select_one("#load_news .box ul.news")
         if not news_list:
-            logger.warning("News list element not found")
+            logger.warning("Elemen daftar berita tidak ditemukan")
             return 0, []
         
         news_items = news_list.find_all("li")
         if not news_items:
-            logger.warning("No news items found in list")
+            logger.warning("Tidak ada item berita ditemukan dalam daftar")
             return 0, []
         
+        # Loop untuk setiap item berita
         for item in news_items:
             try:
-                time_text = item.find("b").text.strip() if item.find("b") else "No time"
+                # Ekstrak waktu publikasi
+                time_text = item.find("b").text.strip() if item.find("b") else "Waktu tidak tersedia"
                 title_tag = item.find("a")
                 
                 if not title_tag or not title_tag.has_attr("href"):
                     continue
                 
+                # Ekstrak judul dan link
                 title = title_tag.text.strip()
                 link = title_tag["href"]
                 
-                # Check if article already exists
+                # Cek apakah artikel sudah ada di database
                 if collection.find_one({"judul": title}):
                     continue
                 
-                # Extract article content
+                # Ekstrak konten artikel
                 article_date, article_content = extract_article_content(driver, link, base_url)
                 if not article_content:
                     continue
                 
-                # Prepare article data
+                # Siapkan data artikel untuk disimpan
                 article_data = {
                     "judul": title,
                     "waktu": time_text,
@@ -156,42 +160,41 @@ def scrape_page(driver, url, base_url, collection):
                     "status_transformasi": "belum"
                 }
                 
-                # Save to database
+                # Simpan ke database
                 result = collection.insert_one(article_data)
                 new_article_ids.append(result.inserted_id)
                 article_count += 1
-                logger.info(f"Saved new article: {title[:50]}...")
+                logger.info(f"Berhasil menyimpan artikel baru: {title[:50]}...")
                 
             except Exception as e:
-                logger.error(f"Error processing news item: {e}")
+                logger.error(f"Error memproses item berita: {e}")
                 continue
         
         return article_count, new_article_ids
         
     except Exception as e:
-        logger.error(f"Error scraping page {url}: {e}")
+        logger.error(f"Error scraping halaman {url}: {e}")
         return 0, []
 
 def extract_news_from_iqplus(news_category: str, news_url_path: str, **kwargs):
-    """Main extraction function with comprehensive error handling for a specific news category"""
-    driver = None # Initialize driver to None
+    driver = None # Inisialisasi driver ke None
     try:
-        logger.info(f"Starting IQPlus news extraction for category: {news_category}")
+        logger.info(f"Memulai ekstraksi berita IQPlus untuk kategori: {news_category}")
         
-        # Setup MongoDB
+        # Setup koneksi MongoDB
         client = get_mongo_client()
         db = client["Iqplus"]
         collection = db["Iqplus_News_Extract"] 
         
-        # Configuration
+        # Konfigurasi URL dan pengaturan
         base_url = "http://www.iqplus.info"
         start_url = f"{base_url}{news_url_path}/go-to-page,0.html"
-        max_pages = int(os.getenv(f'MAX_PAGES_{news_category.upper().replace(" ", "_")}', '210')) # Env var for max pages per category
+        max_pages = int(os.getenv(f'MAX_PAGES_{news_category.upper().replace(" ", "_")}', '210')) # Environment variable untuk max halaman per kategori
         
-        # Setup Selenium
+        # Setup Selenium WebDriver
         driver = setup_selenium_driver()
         
-        # Get total pages to scrape
+        # Dapatkan total halaman yang akan di-scrape
         def get_last_page():
             try:
                 driver.get(start_url)
@@ -202,101 +205,96 @@ def extract_news_from_iqplus(news_category: str, news_url_path: str, **kwargs):
                 soup = BeautifulSoup(driver.page_source, "html.parser")
                 nav_span = soup.find("span", class_="nav")
                 if nav_span:
-                    # Find all page links, the second to last is usually the last page number
+                    # Cari semua link halaman, yang kedua dari terakhir biasanya adalah nomor halaman terakhir
                     page_links = nav_span.find_all("a")
                     if len(page_links) >= 2:
                         last_page_link = page_links[-2] 
                         if last_page_link and last_page_link.text.isdigit():
                             return min(int(last_page_link.text), max_pages)
             except Exception as e:
-                logger.error(f"Error getting last page for {news_category}: {e}")
-            return 1  # Fallback to just first page
+                logger.error(f"Error mendapatkan halaman terakhir untuk {news_category}: {e}")
+            return 1  # Fallback ke halaman pertama saja
         
         last_page = get_last_page()
-        logger.info(f"Will scrape {last_page} pages for {news_category}")
+        logger.info(f"Akan scraping {last_page} halaman untuk {news_category}")
         
-        # Scrape pages
+        # Mulai scraping halaman
         total_articles = 0
         all_new_article_ids = []
         
         for page in range(0, last_page + 1):
-            # Adjust URL structure based on how IQPlus handles pagination for each category
-            # Assuming it's consistent: /news/category/go-to-page,X.html
+            # Sesuaikan struktur URL berdasarkan cara IQPlus menangani paginasi untuk setiap kategori
+            # Asumsi konsisten: /news/category/go-to-page,X.html
             page_url = f"{base_url}{news_url_path}/go-to-page,{page}.html"
-            logger.info(f"Scraping page: {page_url} for {news_category}")
+            logger.info(f"Scraping halaman: {page_url} untuk {news_category}")
             
             articles_scraped, new_ids = scrape_page(driver, page_url, base_url, collection)
             total_articles += articles_scraped
             all_new_article_ids.extend(new_ids)
             
-            logger.info(f"Articles scraped from page {page} ({news_category}): {articles_scraped}")
-            time.sleep(2)  # Be polite to the server
+            logger.info(f"Artikel yang di-scrape dari halaman {page} ({news_category}): {articles_scraped}")
+            time.sleep(2)  # Jeda untuk tidak membebani server
         
-        logger.info(f"Finished scraping {news_category}. Total new articles: {total_articles}")
+        logger.info(f"Selesai scraping {news_category}. Total artikel baru: {total_articles}")
         
-        # Push results to XCom
+        # Push hasil ke XCom untuk digunakan task lain
         kwargs['ti'].xcom_push(key=f'total_extracted_articles_{news_category.lower().replace(" ", "_")}', value=total_articles)
         kwargs['ti'].xcom_push(key=f'new_article_ids_{news_category.lower().replace(" ", "_")}', value=[str(id) for id in all_new_article_ids])
         
     except Exception as e:
-        logger.error(f"Extraction for {news_category} failed: {e}")
+        logger.error(f"Ekstraksi untuk {news_category} gagal: {e}")
         raise
     finally:
+        # Pastikan WebDriver ditutup dengan baik
         if driver:
             try:
                 driver.quit()
             except Exception as e:
-                logger.warning(f"Error closing WebDriver: {e}")
+                logger.warning(f"Error menutup WebDriver: {e}")
 
-# DAG Definition
+# Definisi DAG
 with DAG(
-    dag_id='iqplus_scraper_parallel', # Changed DAG ID to reflect parallel scraping
-    description='Robust IQPlus news scraper for Market and Stock news in parallel',
-    schedule_interval=timedelta(days=1),
+    dag_id='iqplus_scraper_parallel',
+    description='Robust IQPlus news scraper untuk berita Market dan Stock secara paralel',
+    schedule_interval='10 17 * * *',  # Dijadwalkan setiap hari jam 17:10 (5:10 PM)
     start_date=days_ago(1),
-    catchup=False,
+    catchup=False,  # Tidak menjalankan untuk tanggal yang terlewat
     default_args={
         'owner': 'airflow',
-        'retries': 2,
-        'retry_delay': timedelta(minutes=5),
-        'execution_timeout': timedelta(minutes=600),
+        'retries': 2,  # Maksimal 2 kali retry jika task gagal
+        'retry_delay': timedelta(minutes=5),  # Jeda 5 menit antar retry
+        'execution_timeout': timedelta(minutes=360),  # Maximum 6 jam untuk eksekusi
     },
-    tags=['iqplus', 'news', 'scraper', 'parallel'],
+    tags=['iqplus', 'news', 'scraper', 'parallel'],  # Tag untuk kategorisasi DAG
 ) as dag:
 
-    # Define tasks for Market News
+    # Definisi task untuk Market News
     extract_market_news_task = PythonOperator(
         task_id='extract_market_news',
         python_callable=extract_news_from_iqplus,
         op_kwargs={
             'news_category': 'Market News',
-            'news_url_path': '/news/market_news', # Specific path for Market News
+            'news_url_path': '/news/market_news', # Path spesifik untuk Market News
         },
         provide_context=True,
     )
 
-    # Define tasks for Stock News
+    # Definisi task untuk Stock News
     extract_stock_news_task = PythonOperator(
         task_id='extract_stock_news',
         python_callable=extract_news_from_iqplus,
         op_kwargs={
             'news_category': 'Stock News',
-            'news_url_path': '/news/stock_news', # Specific path for Stock News
+            'news_url_path': '/news/stock_news', # Path spesifik untuk Stock News
         },
         provide_context=True,
     )
-
-    # You can add more tasks for other categories if needed
-    # extract_other_news_task = PythonOperator(
-    #     task_id='extract_other_news',
-    #     python_callable=extract_news_from_iqplus,
-    #     op_kwargs={
-    #         'news_category': 'Other News',
-    #         'news_url_path': '/news/other_category', 
-    #     },
-    #     provide_context=True,
-    # )
-
-    # Set task dependencies
-    # Since these are independent, they can run in parallel
-    [extract_market_news_task, extract_stock_news_task]
+    
+    # Ganti 'transform_load_iqplus' dengan ID DAG transformasi Anda jika berbeda
+    trigger_transform_dag = TriggerDagRunOperator(
+        task_id='trigger_transform_dag',
+        trigger_dag_id='transform_load_iqplus',
+    )
+    
+    # Kedua task scraping berjalan paralel, lalu memicu DAG selanjutnya
+    [extract_market_news_task, extract_stock_news_task] >> trigger_transform_dag
