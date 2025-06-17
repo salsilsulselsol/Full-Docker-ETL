@@ -1,26 +1,40 @@
 from __future__ import annotations
-import pendulum
-import logging
+
+# ==== Standard Library ====
 import os
 import sys
+import logging
+import shutil
 import importlib.util
 
+# Tambahkan direktori saat ini ke sys.path
+scripts_path = os.path.dirname(os.path.abspath(__file__))
+if scripts_path not in sys.path:
+    sys.path.append(scripts_path)
+
+# ==== Third-party ====
+import pendulum
+
+# ==== Airflow ====
 from airflow.models.dag import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.bash import BashOperator
 from airflow.utils.task_group import TaskGroup
 from airflow.exceptions import AirflowException
-import shutil
+
+# ==== Custom Module ====
+# from idx_transformation_load_script import ... (nanti ditambahkan di sini)
+
 
 # Setup logging
 logger = logging.getLogger(__name__)
 
 # --- KONFIGURASI DAG UMUM ---
-YEARS_TO_SCRAPE = ["2021"] # Tahun yang akan diekstrak
+YEARS_TO_SCRAPE = ["2021","2022","2023","2024","2025"] # Tahun yang akan diekstrak
 EXTRACTION_POOL_NAME = "idx_etl_pool" # Nama pool untuk semua task ETL
 BASE_DOWNLOAD_DIR = "/opt/airflow/data"  # Base directory untuk semua download
-DEFAULT_PERIODS = "tw1" # Default periods sesuai dengan script utama
+DEFAULT_PERIODS = "tw1,tw2,tw3,audit" # Default periods sesuai dengan script utama
 
 # Karena Anda ingin menyamakan pool untuk semua tahap ETL
 TRANSFORM_LOAD_POOL_NAME = EXTRACTION_POOL_NAME
@@ -37,7 +51,7 @@ def validate_parameters(**context):
         periods = DEFAULT_PERIODS
         years = YEARS_TO_SCRAPE
 
-        valid_periods = ['tw1', 'tw2']
+        valid_periods = ['tw1', 'tw2', 'tw3', 'audit']
         input_periods = [p.strip().lower() for p in periods.split(',')]
 
         for period in input_periods:
@@ -114,7 +128,7 @@ def import_and_run_extraction(**context):
 
         # Import main_extraction_task dari modul idx_extraction_script
         # Asumsikan idx_extraction_script.py ada di dalam folder 'idx/scripts'
-        from idx.scripts.idx_extraction_script import main_extraction_task
+        from idx_extraction_script import main_extraction_task
         logger.info(f"✅ Successfully imported 'main_extraction_task'.")
         
         # Ambil MONGO_URI dari environment variable
@@ -223,7 +237,7 @@ try:
             sys.path.insert(0, scripts_path)
             logger.info(f"Added '{scripts_path}' to sys.path for script imports.")
 
-        from idx.scripts.idx_transformation_load_script import (
+        from idx_transformation_load_script import (
             get_source_collections,
             process_and_load_single_collection,
             create_spark_session

@@ -32,7 +32,7 @@ BASE_DOWNLOAD_DIR = "/opt/airflow/data"
 IDX_URL = "https://idx.co.id/id/perusahaan-tercatat/laporan-keuangan-dan-tahunan/"
 DB_NAME = "idx_financial_data_staging"
 COLLECTION_NAME_PREFIX = "reports"
-DEFAULT_PERIODS = "tw1,tw2" # **PENTING: Pastikan ini sudah terdefinisi di sini!**
+DEFAULT_PERIODS = "tw1,tw2,tw3,audit" # **PENTING: Pastikan ini sudah terdefinisi di sini!**
 
 # === UTILITY FUNCTIONS ===
 
@@ -595,8 +595,9 @@ def scrape_financial_data(driver, mongo_uri, year_to_scrape, periods_to_scrape_s
 
                 # --- DEBUG MODE: Stops after processing the first page ---
                 # Hapus atau komentari 2 baris ini untuk menjalankan seluruh halaman
-                logger.info("💡 DEBUG MODE: Stopping after processing the first page of results.")
-                break # Uncomment this line to stop after the first page
+                logger.info("💡 DEBUG MODE: lanjut halaman")
+                
+                
                 # --- END OF DEBUG MODE MODIFICATION ---
                 
                 # Logic untuk navigasi ke halaman berikutnya (akan dilewati jika break di atas aktif)
