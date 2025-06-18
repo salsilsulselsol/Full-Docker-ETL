@@ -76,7 +76,7 @@ def import_and_run_extraction(**context):
         if scripts_path not in sys.path:
             sys.path.insert(0, scripts_path)
 
-        from idx.idx_extraction_script import main_extraction_task
+        from idx_extraction_script import main_extraction_task
         mongo_uri = os.environ.get("MONGO_URI", "mongodb://mongodb-external:27017/")
         
         logger.info(f"Starting extraction for year {year}, period {period}")
@@ -125,7 +125,7 @@ try:
     if scripts_path not in sys.path:
         sys.path.insert(0, scripts_path)
 
-    from idx.idx_transformation_load_script import (
+    from idx_transformation_load_script import (
         get_source_collections,
         process_and_load_single_collection,
         create_spark_session

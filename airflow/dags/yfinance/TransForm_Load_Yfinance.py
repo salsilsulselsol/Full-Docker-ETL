@@ -3,6 +3,7 @@ from airflow.operators.python import PythonOperator
 from airflow.operators.dummy import DummyOperator
 from airflow.sensors.external_task import ExternalTaskSensor
 from airflow.utils.dates import days_ago
+from airflow.utils import timezone as airflow_timezone
 from datetime import datetime, timedelta
 import pandas as pd
 import numpy as np
@@ -539,12 +540,12 @@ default_args_transform_load = {
     'retry_delay': timedelta(minutes=15),    # Increased retry delay
     'email_on_failure': False,
     'email_on_retry': False,
+    'start_date': airflow_timezone.datetime(2024, 6, 1),
 }
 
 with DAG(
     dag_id='etl_yfinance_spark_transform_load_dag',
     description='DAG for Stock Data Transformation and Load with Spark and Aggregation',
-    start_date=days_ago(1),    # Start date set to 1 day ago
     schedule_interval=timedelta(days=1),    # Runs daily
     catchup=False,    # Prevents backfilling past runs
     default_args=default_args_transform_load,
