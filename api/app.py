@@ -207,6 +207,147 @@ def get_iqplus_news_by_id(news_id):
         client.close()
         return jsonify({"status": "error", "message": "Invalid news ID"}), 400
 
+# ====================================================================
+# ENDPOINT BARU 1: Daftar Laporan Keuangan (Semua Company)
+# ====================================================================
+@app.route('/api/reports/list/<year>/<period>', methods=['GET'])
+def get_reports_list(year, period):
+    logger.info(f"Request received: GET /api/reports/list/{year}/{period}")
+    
+    try:
+        client = get_mongo_client()
+        db = client["idx_financial_data_production"]
+        
+        # Debug: Log semua collections yang ada
+        collections = db.list_collection_names()
+        logger.info(f"Available collections: {collections}")
+
+        search_query = request.args.get('search', '')
+        try:
+            page = int(request.args.get('page', 1))
+            limit = int(request.args.get('limit', 9))
+        except ValueError:
+            page = 1
+            limit = 9
+
+        collection_name = f"processed_reports_{year}_{period}"
+        logger.info(f"Looking for collection: {collection_name}")
+
+        if collection_name not in collections:
+            logger.warning(f"Collection {collection_name} not found")
+            client.close()
+            return jsonify({
+                "status": "error",
+                "message": f"Data untuk {year} periode {period} tidak ditemukan.",
+                "available_collections": collections,
+                "data": [],
+                "total_count": 0
+            }), 404
+
+        collection = db[collection_name]
+        
+        # Debug: Check total documents in collection
+        total_docs = collection.count_documents({})
+        logger.info(f"Total documents in {collection_name}: {total_docs}")
+
+        query = {}
+        if search_query:
+            query['$or'] = [
+                {'company_code': {'$regex': search_query, '$options': 'i'}},
+                {'company_name': {'$regex': search_query, '$options': 'i'}}
+            ]
+            logger.info(f"Search query: {query}")
+
+        total_count = collection.count_documents(query)
+        logger.info(f"Documents matching query: {total_count}")
+        
+        skip = (page - 1) * limit
+        reports = list(collection.find(query).skip(skip).limit(limit))
+        logger.info(f"Retrieved {len(reports)} reports")
+
+        # Convert ObjectId to string
+        for report in reports:
+            if '_id' in report:
+                report['_id'] = str(report['_id'])
+
+        client.close()
+        return jsonify({
+            "status": "success",
+            "total_count": total_count,
+            "page": page,
+            "limit": limit,
+            "data": reports
+        })
+        
+    except Exception as e:
+        logger.error(f"Error in get_reports_list: {str(e)}")
+        if 'client' in locals():
+            client.close()
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+# ====================================================================
+# ENDPOINT BARU 2: Detail Laporan Keuangan (Per Company)
+# ====================================================================
+@app.route('/api/reports/detail/<company_code>/<year>/<period>', methods=['GET'])
+def get_report_detail(company_code, year, period):
+    logger.info(f"Request received: GET /api/reports/detail/{company_code}/{year}/{period}")
+    
+    try:
+        client = get_mongo_client()
+        db = client["idx_financial_data_production"]
+        collection_name = f"processed_reports_{year}_{period}"
+        
+        # Debug: Log semua collections yang ada
+        collections = db.list_collection_names()
+        logger.info(f"Available collections: {collections}")
+        logger.info(f"Looking for collection: {collection_name}")
+
+        if collection_name not in collections:
+            logger.warning(f"Collection {collection_name} not found")
+            client.close()
+            return jsonify({
+                "status": "error",
+                "message": f"Data untuk {year} periode {period} tidak ditemukan.",
+                "available_collections": collections
+            }), 404
+
+        collection = db[collection_name]
+        
+        # Debug: Log company codes yang ada
+        company_codes = collection.distinct('company_code')
+        logger.info(f"Available company codes: {company_codes}")
+        
+        company_code_upper = company_code.upper()
+        logger.info(f"Searching for company_code: {company_code_upper}")
+
+        report = collection.find_one({'company_code': company_code_upper})
+        
+        if not report:
+            logger.warning(f"Report for {company_code_upper} not found")
+            client.close()
+            return jsonify({
+                "status": "error",
+                "message": f"Laporan keuangan untuk {company_code_upper} tidak ditemukan di periode ini.",
+                "available_companies": company_codes
+            }), 404
+        
+        # Convert ObjectId to string
+        if '_id' in report:
+            report['_id'] = str(report['_id'])
+            
+        client.close()
+        logger.info(f"Successfully retrieved report for {company_code_upper}")
+
+        return jsonify({
+            "status": "success",
+            "data": report
+        })
+
+    except Exception as e:
+        logger.error(f"Error in get_report_detail: {str(e)}")
+        if 'client' in locals():
+            client.close()
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == '_main_':
     app.run(host='0.0.0.0', port=5000, debug=True)
