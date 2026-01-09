@@ -5,7 +5,7 @@
 Repository ini berfungsi sebagai **Backend** dari sistem Analitik Saham Big Data. Sistem ini bertanggung jawab untuk mengambil (Extract), membersihkan (Transform), dan menyimpan (Load) data pasar modal secara otomatis dan terjadwal.
 
 Frontend untuk memvisualisasikan data ini dapat ditemukan di:
-🔗 **[sif4imnurul/dashboard_bigdata](https://github.com/sif4imnurul/dashboard_bigdata)**
+🔗 **[salsilsulselsol/dashboard_bigdata](https://github.com/salsilsulselsol/dashboard_bigdata)**
 
 ## Arsitektur Sistem
 
